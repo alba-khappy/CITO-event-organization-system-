@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+$blueColor: #13377d;
+$blackColor: #000000;
+$darkGray: #58595b;
+$disabledGrayColor: #dadada;
+$lightGrayColor: #a3a3a3;
+$white: #FFFFFF;
+$red: #E22020;
+$green:#36CE00;
+
+.main-heading {
+    font-weight: bold;
+    font-size: 36px;
+    color: #58595b;
+}

@@ -1,0 +1,71 @@
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title= "Event organization system"
+    link(rel='stylesheet', href='./main.css', type='text/css')
+
+  body
+      include header.pug
+      include breadcrumbs.pug
+      section.requests 
+        .container.request-container 
+            h1.main-heading Мои заявки
+            div.requests-wrapper
+                img(src="./images/avatar.png", alt="photo").request__profile-photo
+                p.request__profile-name Иванов Иван Иванович
+                div.request__select 
+                    .select__main-item Заявка в пропускное бюро
+                    ul.select__items
+                        li.select__item Заявка в пропускное бюро
+                        li.select__item Заявка в пропускное бюро
+                        li.select__item Заявка в пропускное бюро
+
+                    
+                button.requests__add-request Отправить
+            
+            div.calendar
+                p.calendar__month Август 2021
+                p ПН
+                p ВТ
+                p СР
+                p ЧТ
+                p ПТ
+                p СБ
+                p ВС
+                p 16
+                p 17
+                p 18
+                p 19
+                p.today 20
+                p 21
+                p 22
+                p 23
+                p 24
+                p.event 25
+                p 26
+                p 27
+                p 28
+                p 29
+                p 30
+                p 31
+                p.calendar__month.calendar__month--second Сентябрь
+                p 1
+                p 2
+                p 3
+                p 4
+                p 5
+                p 6
+                p 7
+                p 8
+                p 9
+                p 10
+                p 11
+                p 12
+
+
+
+            div.time
+            div.
+
+        script(src='./app.js')

@@ -1,0 +1,118 @@
+@import "general.scss";
+
+.request-container {
+    padding: 30px 120px;
+}
+
+.requests-wrapper {
+    display: grid;
+    grid-template-columns: auto 150px 1fr auto;
+    column-gap: 20px;
+}
+
+.request__profile-photo {
+    width: 134px;
+    height: 134px;
+}
+
+.request__profile-name {
+    color: $blueColor;
+    align-self: center;
+}
+
+.request__select {
+    align-self: end;
+}
+
+.requests__add-request {
+    background-color: $blueColor;
+    border-radius: 100px;
+    align-self: end;
+    padding: 10px 48px;
+    border: none;
+    color: $white;
+}
+
+/*select*/
+
+.request__select {
+    display: grid;
+    justify-content: end;
+}
+
+.select__items {
+    display: none;
+    list-style: none;
+    // display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.6px solid #c4c4c4;
+    border-radius: 10px;
+    background-color: $white;
+    color: $darkGray;
+}
+
+.select__main-item {
+    position: relative;
+    min-width: 400px;
+    border: 0.6px solid #c4c4c4;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 5px;
+    background-color: $white;
+    text-align: left;
+    color: #58595b;
+
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url("../images/arrow.svg");
+        background-repeat: no-repeat;
+        width: 12px;
+        height: 6px;
+        top: 21px;
+        right: 15px;
+    }
+}
+
+.select__item {
+    padding: 10px;
+}
+
+/*calendar*/
+
+.calendar {
+    display: grid;
+    width: 323px;
+    height: 316px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    background: #ffffff;
+    border: 1px solid $disabledGrayColor;
+    border-radius: 10px;
+    padding: 17px 20px;
+}
+
+.calendar__month {
+    grid-column: 1/-1;
+    color: $blueColor;
+}
+
+.calendar__month--second {
+    border-bottom: 1px solid $disabledGrayColor;
+}
+
+.today {
+    color: $red;
+}
+
+.event {
+    &::after {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        color: $green;
+    }
+}

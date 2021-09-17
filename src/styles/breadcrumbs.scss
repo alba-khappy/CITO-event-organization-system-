@@ -1,0 +1,24 @@
+@import "general.scss";
+
+.breadcrumbs {
+    background-color: #F7F7F7;
+}
+
+.breadcrumbs-container {
+    padding: 16px 120px;
+}
+
+.breadcrumbs-list {
+    display: flex;
+}
+
+.breadcrumbs-link {
+    font-size: 14px;
+    font-weight: 400;
+    color: $blueColor;
+}
+
+.breadcrumbs-link--disabled {
+    color: $lightGrayColor;
+}
+ 

@@ -1,0 +1,28 @@
+@import "general.scss";
+
+.header-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 16px 120px;
+}
+
+.header__profile {
+    justify-self: end;
+    display: grid;
+    align-items: center;
+    column-gap: 10px;
+    grid-template-columns: repeat(3, auto);
+
+    &::after {
+        content: '';
+        background-image: url('../images/arrow.svg');
+        background-repeat: no-repeat;
+        width: 12px;
+        height: 6px;
+    }
+}
+
+.header__profile-name {
+    color: $blueColor;
+}

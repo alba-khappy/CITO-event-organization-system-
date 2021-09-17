@@ -1,0 +1,394 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.main-heading {
+  font-weight: bold;
+  font-size: 36px;
+  color: #58595b;
+}
+
+.breadcrumbs {
+  background-color: #F7F7F7;
+}
+
+.breadcrumbs-container {
+  padding: 16px 120px;
+}
+
+.breadcrumbs-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.breadcrumbs-link {
+  font-size: 14px;
+  font-weight: 400;
+  color: #13377d;
+}
+
+.breadcrumbs-link--disabled {
+  color: #a3a3a3;
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.main-heading {
+  font-weight: bold;
+  font-size: 36px;
+  color: #58595b;
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.main-heading {
+  font-weight: bold;
+  font-size: 36px;
+  color: #58595b;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 16px 120px;
+}
+
+.header__profile {
+  justify-self: end;
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+  grid-template-columns: repeat(3, auto);
+}
+.header__profile::after {
+  content: "";
+  background-image: url("../images/arrow.svg");
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 6px;
+}
+
+.header__profile-name {
+  color: #13377d;
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.main-heading {
+  font-weight: bold;
+  font-size: 36px;
+  color: #58595b;
+}
+
+.request-container {
+  padding: 30px 120px;
+}
+
+.requests-wrapper {
+  display: grid;
+  grid-template-columns: auto 150px 1fr auto;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+}
+
+.request__profile-photo {
+  width: 134px;
+  height: 134px;
+}
+
+.request__profile-name {
+  color: #13377d;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.request__select {
+  -ms-flex-item-align: end;
+  align-self: end;
+}
+
+.requests__add-request {
+  background-color: #13377d;
+  border-radius: 100px;
+  -ms-flex-item-align: end;
+  align-self: end;
+  padding: 10px 48px;
+  border: none;
+  color: #FFFFFF;
+}
+
+/*select*/
+.request__select {
+  display: grid;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+}
+
+.select__items {
+  display: none;
+  list-style: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 0.6px solid #c4c4c4;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  color: #58595b;
+}
+
+.select__main-item {
+  position: relative;
+  min-width: 400px;
+  border: 0.6px solid #c4c4c4;
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin-bottom: 5px;
+  background-color: #FFFFFF;
+  text-align: left;
+  color: #58595b;
+}
+.select__main-item::after {
+  content: "";
+  position: absolute;
+  background-image: url("../images/arrow.svg");
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 6px;
+  top: 21px;
+  right: 15px;
+}
+
+.select__item {
+  padding: 10px;
+}
+
+/*calendar*/
+.calendar {
+  display: grid;
+  width: 323px;
+  height: 316px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  background: #ffffff;
+  border: 1px solid #dadada;
+  border-radius: 10px;
+  padding: 17px 20px;
+}
+
+.calendar__month {
+  grid-column: 1/-1;
+  color: #13377d;
+}
+
+.calendar__month--second {
+  border-bottom: 1px solid #dadada;
+}
+
+.today {
+  color: #E22020;
+}
+
+.event::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  color: #36CE00;
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.main-heading {
+  font-weight: bold;
+  font-size: 36px;
+  color: #58595b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.main-heading {
+  font-weight: bold;
+  font-size: 36px;
+  color: #58595b;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 16px 120px;
+}
+
+.header__profile {
+  justify-self: end;
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+  grid-template-columns: repeat(3, auto);
+}
+.header__profile::after {
+  content: "";
+  background-image: url("../images/arrow.svg");
+  background-repeat: no-repeat;
+  width: 12px;
+  height: 6px;
+}
+
+.header__profile-name {
+  color: #13377d;
+}
