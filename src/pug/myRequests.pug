@@ -10,7 +10,7 @@ html(lang="ru")
       include breadcrumbs.pug
       section.requests 
         .container.request-container 
-            h1.main-heading Мои заявки
+            h1.main-heading.request-heading--margin Мои заявки
             div.requests-wrapper
                 img(src="./images/avatar.png", alt="photo").request__profile-photo
                 p.request__profile-name Иванов Иван Иванович
@@ -22,22 +22,22 @@ html(lang="ru")
                         li.select__item Заявка в пропускное бюро
 
                     
-                button.requests__add-request Отправить
+                button.requests__add-request Создать
             
             div.calendar
                 p.calendar__month Август 2021
-                p ПН
-                p ВТ
-                p СР
-                p ЧТ
-                p ПТ
-                p СБ
-                p ВС
+                p.calendar__week-day ПН
+                p.calendar__week-day ВТ
+                p.calendar__week-day СР
+                p.calendar__week-day ЧТ
+                p.calendar__week-day ПТ
+                p.calendar__week-day СБ
+                p.calendar__week-day ВС
                 p 16
                 p 17
                 p 18
                 p 19
-                p.today 20
+                p.calendar__today 20
                 p 21
                 p 22
                 p 23
@@ -66,6 +66,14 @@ html(lang="ru")
 
 
             div.time
-            div.
+            .tabs
+                .tabs_requests Заявки
+                .tabs_events Мероприятия
+                ul.tabs_requests-list
+                    li.tabs_requests-item
+                    li.tabs_requests-item
+                    li.tabs_requests-item
+
+
 
         script(src='./app.js')

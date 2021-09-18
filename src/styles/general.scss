@@ -12,7 +12,26 @@ li {
     list-style-type: none;
 }
 
+@font-face {
+    font-family: "Geometria"; 
+    src:
+    url("../fonts/Geometria-Regular.woff") format("woff"),
+    url("../fonts/Geometria-Regular.woff2") format("woff2");
+    font-style: normal; 
+    font-weight: normal; 
+    }
+
+@font-face {
+        font-family: "Geometria"; 
+        src:
+        url("../fonts/Geometria-Bold.woff") format("woff"),
+        url("../fonts/Geometria-Bold.woff2") format("woff2");
+        font-style: normal; 
+        font-weight: bold; 
+        }
+
 body {
+    font-family: "Geometria", serif; 
     font-size: 16px;
     font-weight: 400;
 }
@@ -21,6 +40,8 @@ body {
     max-width: 1440px;
     margin: 0 auto;
 }
+
+
 
 $blueColor: #13377d;
 $blackColor: #000000;
