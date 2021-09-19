@@ -403,6 +403,16 @@ body {
 .tabs_requests--active {
   z-index: 10;
   background-color: #FFFFFF;
+  position: relative;
+}
+.tabs_requests--active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #FFFFFF;
+  left: 0;
+  bottom: -2;
 }
 
 .tabs_requests-list {
@@ -412,7 +422,6 @@ body {
   border-radius: 0 0 10px 10px;
   border: 0.6px solid #C4C4C4;
   width: 835px;
-  bottom: -35px;
   z-index: 0;
   background-color: white;
 }
