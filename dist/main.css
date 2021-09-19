@@ -377,15 +377,18 @@ body {
 /*tabs*/
 .tabs {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: 1fr 10px 1fr;
+  width: 835px;
+  position: relative;
 }
 
 .tabs_requests {
   grid-area: 1/1/2/3;
+  background-color: #F6F6F6;
   border: 0.6px solid #C4C4C4;
   border-radius: 10px 10px 0 0;
-  background-color: #FFFFFF;
   border-bottom: none;
+  padding: 20px 40px;
 }
 
 .tabs_events {
@@ -394,13 +397,24 @@ body {
   border: 0.6px solid #C4C4C4;
   border-bottom: none;
   border-radius: 10px 10px 0 0;
+  padding: 20px 40px;
+}
+
+.tabs_requests--active {
+  z-index: 10;
+  background-color: #FFFFFF;
 }
 
 .tabs_requests-list {
+  position: absolute;
   grid-area: 2/1/3/-1;
   padding: 14px 9px;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
   border: 0.6px solid #C4C4C4;
+  width: 835px;
+  bottom: -35px;
+  z-index: 0;
+  background-color: white;
 }
 
 .tabs_requests-item {
