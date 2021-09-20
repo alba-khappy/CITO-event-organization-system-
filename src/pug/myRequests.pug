@@ -31,68 +31,68 @@ html(lang="ru")
                     span 2021 
 
                 .calendar__week-days 
-                    p ПН
-                    p ВТ
-                    p СР
-                    p ЧТ
-                    p ПТ
-                    p СБ
-                    p ВС
+                    span ПН
+                    span ВТ
+                    span СР
+                    span ЧТ
+                    span ПТ
+                    span СБ
+                    span ВС
                 div.calendar__days.calendar__days--first
-                    p.calendar__last-day 16
-                    p.calendar__last-day 17
-                    p.calendar__last-day 18
-                    p.calendar__last-day 19
-                    p.calendar__today 20
-                    p.calendar__day-off 21
-                    p.calendar__day-off 22
-                    p 23
-                    p 24
-                    p.event 25
-                    p 26
-                    p 27
-                    p.calendar__day-off 28
-                    p.calendar__day-off 29
-                    p 30
-                    p 31
+                    span.calendar__last-day 16
+                    span.calendar__last-day 17
+                    span.calendar__last-day 18
+                    span.calendar__last-day 19
+                    span.calendar__today 20
+                    span.calendar__day-off 21
+                    span.calendar__day-off 22
+                    span 23
+                    span 24
+                    span.calendar__event 25
+                    span 26
+                    span 27
+                    span.calendar__day-off 28
+                    span.calendar__day-off 29
+                    span.calendar__event 30
+                    span 31
                 div.calendar__month.calendar__month--second Сентябрь
                 div.calendar__days.calendar__days--second 
-                    p 1
-                    p 2
-                    p 3
-                    p 4
-                    p 5
-                    p.calendar__day-off 6
-                    p.calendar__day-off 7
-                    p 8
-                    p 9
-                    p 10
-                    p 11
-                    p 12
+                    span 1
+                    span.calendar__event 2
+                    span 3
+                    span 4
+                    span 5
+                    span.calendar__day-off 6
+                    span.calendar__day-off 7
+                    span 8
+                    span 9
+                    span 10
+                    span 11
+                    span 12
 
 
             div.time
-                p.time--disabled 09.00-09.30
-                p 09.00-09.30
-                p 09.00-09.30
-                p 09.00-09.30
-                p 09.00-09.30
-                p 09.00-09.30
-                p 09.00-09.30
-                p.time--disabled 09.00-09.30
-                p 09.00-09.30
-                p 09.00-09.30
-                p 09.00-09.30
-                p 09.00-09.30
-                p.time--disabled 09.00-09.30
-                p 09.00-09.30
-                p.time--event 09.00-09.30
-                p.time--event 09.00-09.30
-                p 09.00-09.30
-                p.time--disabled 09.00-09.30
-                p.time--disabled 09.00-09.30
-                p 09.00-09.30
-                p 09.00-09.30
+                span.time--disabled 09.00-09.30
+                span 09.00-09.30
+                span 09.00-09.30
+                span 09.00-09.30
+                span 09.00-09.30
+                span 09.00-09.30
+                span 09.00-09.30
+                span.time--disabled 09.00-09.30
+                span 09.00-09.30
+                span 09.00-09.30
+                span 09.00-09.30
+                span 09.00-09.30
+                span.time--disabled 09.00-09.30
+                span 09.00-09.30
+                span.time--event 09.00-09.30
+                span.time--event 09.00-09.30
+                span 09.00-09.30
+                span.time--disabled 09.00-09.30
+                span.time--disabled 09.00-09.30
+                span 09.00-09.30
+                span 09.00-09.30
                 
 
             div.tabs
@@ -100,60 +100,68 @@ html(lang="ru")
                 .tabs_events.tabs-style Мероприятия
 
                 ul.tabs__list.tabs-requests-list.tabs-list--active
-                    li.tabs_requests-item.tabs_requests-item--1
-                        img(src="./images/require-icon.svg", alt="")
-                        p.tabs_requests-item--number Заявка №1
-                        div 
-                            span 25 / 08 / 2021 
-                            span 13:00
-                    li.tabs_requests-item.tabs_requests-item--2
-                        img(src="./images/require-icon.svg", alt="")
-                        p.tabs_requests-item--number Заявка №1
-                        div 
-                            span 25 / 08 / 2021 
-                            span 13:00
+                    li.tabs_requests-item
+                        a(href="").tabs_requests-link.tabs-link--1
+                            img(src="./images/require-icon.svg", alt="")
+                            p.tabs_requests-item--number Заявка №1
+                            div 
+                                span 25 / 08 / 2021 
+                                span 13:00
+                    li.tabs_requests-item
+                        a(href="").tabs_requests-link.tabs-link--2 
+                            img(src="./images/require-icon.svg", alt="")
+                            p.tabs_requests-item--number Заявка №1
+                            div 
+                                span 25 / 08 / 2021 
+                                span 13:00
 
-                    li.tabs_requests-item.tabs_requests-item--3
-                        img(src="./images/require-icon.svg", alt="")
-                        p.tabs_requests-item--number Заявка №1
-                        div 
-                            span 25 / 08 / 2021 
-                            span 13:00
+                    li.tabs_requests-item
+                        a(href="").tabs_requests-link.tabs-link--3
+                            img(src="./images/require-icon.svg", alt="")
+                            p.tabs_requests-item--number Заявка №1
+                            div 
+                                span 25 / 08 / 2021 
+                                span 13:00
 
-                    li.tabs_requests-item.tabs_requests-item--1
-                        img(src="./images/require-icon.svg", alt="")
-                        p.tabs_requests-item--number Заявка №1
-                        div 
-                            span 25 / 08 / 2021 
-                            span 13:00
+                    li.tabs_requests-item
+                        a(href="").tabs_requests-link.tabs-link--1
+                            img(src="./images/require-icon.svg", alt="")
+                            p.tabs_requests-item--number Заявка №1
+                            div 
+                                span 25 / 08 / 2021 
+                                span 13:00
 
                 ul.tabs__list.tabs-events-list
-                    li.tabs_requests-item.tabs_requests-item--2
-                        img(src="./images/require-icon.svg", alt="")
-                        p.tabs_requests-item--number Мероприятие №1
-                        div 
-                            span 25 / 08 / 2021 
-                            span 13:00
-                    li.tabs_requests-item.tabs_requests-item--3
-                        img(src="./images/require-icon.svg", alt="")
-                        p.tabs_requests-item--number Мероприятие №1
-                        div 
-                            span 25 / 08 / 2021 
-                            span 13:00
+                    li.tabs_requests-item
+                        a(href="").tabs_events-link.tabs-link--1
+                            img(src="./images/require-icon.svg", alt="")
+                            p.tabs_requests-item--number Мероприятие №1
+                            div 
+                                span 25 / 08 / 2021 
+                                span 13:00
+                    li.tabs_requests-item
+                        a(href="").tabs_events-link.tabs-link--2
+                            img(src="./images/require-icon.svg", alt="")
+                            p.tabs_requests-item--number Мероприятие №1
+                            div 
+                                span 25 / 08 / 2021 
+                                span 13:00
 
-                    li.tabs_requests-item.tabs_requests-item--1
-                        img(src="./images/require-icon.svg", alt="")
-                        p.tabs_requests-item--number Мероприятие №1
-                        div 
-                            span 25 / 08 / 2021 
-                            span 13:00
+                    li.tabs_requests-item
+                        a(href="").tabs_events-link.tabs-link--3
+                            img(src="./images/require-icon.svg", alt="")
+                            p.tabs_requests-item--number Мероприятие №1
+                            div 
+                                span 25 / 08 / 2021 
+                                span 13:00
 
-                    li.tabs_requests-item.tabs_requests-item--1
-                        img(src="./images/require-icon.svg", alt="")
-                        p.tabs_requests-item--number Мероприятие №1
-                        div 
-                            span 25 / 08 / 2021 
-                            span 13:00
+                    li.tabs_requests-item
+                        a(href="").tabs_events-link.tabs-link--1
+                            img(src="./images/require-icon.svg", alt="")
+                            p.tabs_requests-item--number Мероприятие №1
+                            div 
+                                span 25 / 08 / 2021 
+                                span 13:00
                
 
 

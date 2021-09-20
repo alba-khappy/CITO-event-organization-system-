@@ -12,7 +12,7 @@
     grid-area: 2/1/3/2;
     display: grid;
     grid-template-columns: 165px 160px;
-    grid-template-rows: 75px 75px;
+    grid-template-rows: 54px auto;
 }
 
 .request__profile-photo {
@@ -39,6 +39,7 @@
 }
 
 .requests__add-request {
+    font-family: "Geometria", serif;
     grid-area: 2/4/3/5;
     background-color: $blueColor;
     border-radius: 100px;
@@ -139,7 +140,7 @@
     font-weight: bold;
 }
 
-.calendar__days > p {
+.calendar__days > span {
     height: 35px;
 }
 
@@ -162,7 +163,7 @@
     grid-template-columns: repeat(7, 1fr);
     grid-column: 1/-1;
 
-    p {
+    span {
         font-size: 13px;
         line-height: 16px;
         letter-spacing: 0.05em;
@@ -188,6 +189,21 @@
 .calendar__today {
     color: $red;
     font-weight: bold;
+}
+
+.calendar__event {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background-color: #36ce00;
+        left: 46px;
+        bottom: 10px;
+        border-radius: 10px;
+    }
 }
 
 .calendar__last-day {
@@ -238,7 +254,7 @@
         position: absolute;
         width: 20px;
         height: 8px;
-        background-color: #FFFFFF;
+        background-color: #ffffff;
         right: -2px;
         bottom: 0px;
     }
@@ -252,7 +268,7 @@
         position: absolute;
         width: 20px;
         height: 8px;
-        background-color: #FFFFFF;
+        background-color: #ffffff;
         left: -2px;
         bottom: 0px;
     }
@@ -284,14 +300,18 @@ ul.tabs-list--active {
 }
 
 .tabs_requests-item {
-    display: grid;
-    position: relative;
-    grid-template-columns: 75px 1fr 175px;
-    padding: 26px 30px;
     border-radius: 10px;
     background-color: #f7f9fe;
     border: 0.6px solid #c4c4c4;
     align-items: center;
+
+}
+
+.tabs_requests-link, .tabs_events-link {
+    display: grid;
+    position: relative;
+    grid-template-columns: 75px 1fr 175px;
+    padding: 26px 30px;
 
     &::after {
         content: "";
@@ -304,23 +324,21 @@ ul.tabs-list--active {
     }
 }
 
-.tabs_requests-item--1 {
-
+.tabs-link--1 {
     &::after {
-    background-color: $orange;
+        background-color: $orange;
     }
 }
 
-.tabs_requests-item--2 {
-
+.tabs-link--2 {
     &::after {
-    background-color: $red;
+        background-color: $red;
     }
 }
 
-.tabs_requests-item--3 {
+.tabs-link--3 {
     &::after {
-    background-color: $green;
+        background-color: $green;
     }
 }
 
@@ -346,7 +364,7 @@ ul.tabs-list--active {
     border-radius: 10px;
     padding: 17px 20px;
 
-    p {
+    span {
         font-size: 13px;
         line-height: 32px;
         letter-spacing: 0.05em;

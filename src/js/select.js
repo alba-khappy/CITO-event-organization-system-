@@ -1,8 +1,14 @@
 const select = document.querySelector('.select__main-item');
 const selectList = document.querySelector('.select__items');
-const selectItem = document.querySelector('.select__item');
+const selectItem = document.querySelectorAll('.select__item');
 
-select.innerHTML = selectItem.innerHTML;
+select.innerHTML = selectItem[1].innerHTML;
+
+for (let i = 0; i < 3; i++) {
+    selectItem[i].addEventListener('click', function(){
+        select.innerHTML = selectItem[i].innerHTML;
+    });
+}
 
 select.addEventListener('click', function(){
     if(selectList.classList.contains('select--close')){
@@ -12,6 +18,3 @@ select.addEventListener('click', function(){
     }
 });
 
-selectItem.addEventListener('click', function(){
-    select.innerHTML = selectItem.innerHTML;
-});
