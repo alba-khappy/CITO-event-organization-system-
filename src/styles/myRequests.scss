@@ -221,6 +221,8 @@
 }
 
 .tabs-style {
+    color: $darkGray;
+    font-size: 18px;
     background-color: #f6f6f6;
     border: 0.6px solid #c4c4c4;
     border-radius: 10px 10px 0 0;
@@ -264,15 +266,12 @@
     font-size: 18px;
 }
 
-.tabs-list--active {
+ul.tabs-list--active {
     display: block;
 }
 
-.tabs-list--close {
-    display: none;
-}
-
 .tabs__list {
+    display: none;
     position: absolute;
     grid-area: 2/1/3/-1;
     padding: 14px 9px;
@@ -299,10 +298,29 @@
         position: absolute;
         width: 7px;
         height: 7px;
-        background-color: $orange;
         right: 10px;
         top: 10px;
         border-radius: 10px;
+    }
+}
+
+.tabs_requests-item--1 {
+
+    &::after {
+    background-color: $orange;
+    }
+}
+
+.tabs_requests-item--2 {
+
+    &::after {
+    background-color: $red;
+    }
+}
+
+.tabs_requests-item--3 {
+    &::after {
+    background-color: $green;
     }
 }
 
