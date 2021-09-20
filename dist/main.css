@@ -424,6 +424,14 @@ body {
   font-weight: bold;
 }
 
+.calendar__last-day {
+  color: #dadada;
+}
+
+.calendar__day-off {
+  color: #a3a3a3;
+}
+
 .event::after {
   content: "";
   position: absolute;
@@ -454,9 +462,27 @@ body {
 .tabs_requests {
   grid-area: 1/1/2/3;
 }
+.tabs_requests::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 8px;
+  background-color: #FFFFFF;
+  right: -2px;
+  bottom: 0px;
+}
 
 .tabs_events {
   grid-area: 1/2/2/4;
+}
+.tabs_events::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 8px;
+  background-color: #FFFFFF;
+  left: -2px;
+  bottom: 0px;
 }
 
 .tabs--active {
@@ -466,17 +492,16 @@ body {
   color: #13377d;
   font-size: 18px;
 }
-.tabs--active::after {
-  content: "";
-  position: absolute;
-  width: 105%;
-  height: 8px;
-  background-color: #FFFFFF;
-  left: 0;
-  bottom: 0px;
+
+.tabs-list--active {
+  display: block;
 }
 
-.tabs_requests-list {
+.tabs-list--close {
+  display: none;
+}
+
+.tabs__list {
   position: absolute;
   grid-area: 2/1/3/-1;
   padding: 14px 9px;

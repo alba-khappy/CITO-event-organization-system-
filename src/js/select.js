@@ -1,5 +1,6 @@
 const select = document.querySelector('.select__main-item');
 const selectList = document.querySelector('.select__items');
+const selectItem = document.querySelector('.select__item');
 
 select.addEventListener('click', function(){
     if(selectList.classList.contains('select--close')){
@@ -7,5 +8,8 @@ select.addEventListener('click', function(){
     } else {
         selectList.classList.add("select--close");
     }
-    
-})
+});
+
+selectItem.addEventListener('click', function(){
+    select.innerHTML = selectItem.innerHTML;
+});
