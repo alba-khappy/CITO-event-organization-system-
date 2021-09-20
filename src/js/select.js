@@ -1,4 +1,11 @@
-const select = document.querySelector('.select__items');
+const select = document.querySelector('.select__main-item');
+const selectList = document.querySelector('.select__items');
+
 select.addEventListener('click', function(){
-    select.classList.toggle(".select--open");
+    if(selectList.classList.contains('select--close')){
+        selectList.classList.remove("select--close");
+    } else {
+        selectList.classList.add("select--close");
+    }
+    
 })

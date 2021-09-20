@@ -298,7 +298,6 @@ body {
   right: 0;
   top: 60px;
   z-index: 15;
-  display: none;
   list-style: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -314,6 +313,10 @@ body {
   border-radius: 10px;
   background-color: #FFFFFF;
   color: #58595b;
+}
+
+.select--close {
+  display: none;
 }
 
 .select--open {

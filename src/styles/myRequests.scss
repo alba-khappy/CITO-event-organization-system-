@@ -70,7 +70,6 @@
     right: 0;
     top: 60px;
     z-index: 15;
-    display: none;
     list-style: none;
     flex-direction: column;
     justify-content: center;
@@ -79,6 +78,10 @@
     border-radius: 10px;
     background-color: $white;
     color: $darkGray;
+}
+
+.select--close {
+    display: none;
 }
 
 .select--open {
