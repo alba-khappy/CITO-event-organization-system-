@@ -127,7 +127,7 @@
     grid-area: 3/2/4/5;
     display: grid;
     grid-template-columns: 1fr 10px 1fr;
-    width: 835px;
+    width: 100%;
     position: relative;
     align-self: start;
     justify-self: end;
@@ -189,13 +189,13 @@ ul.tabs-list--active {
     padding: 14px 9px;
     border-radius: 10px;
     border: 0.6px solid #c4c4c4;
-    width: 835px;
+    width: 100%;
     z-index: 0;
     background-color: white;
     top: -10px;
 }
 
-.tabs-requests-list {
+.tabs-events-list, .tabs-requests-list {
     grid-area: 2/1/3/-1;
 }
 
