@@ -2,7 +2,7 @@
 
 .request-container {
     display: grid;
-    grid-template-columns: auto 150px 1fr auto;
+    grid-template-columns: 375px 1fr auto auto;
     grid-template-rows: 60px 155px;
     padding: 20px 120px;
     row-gap: 15px;
@@ -117,111 +117,8 @@
 
 /*calendar*/
 
-.calendar {
+.requests--calendar-position {
     grid-row: 3;
-    display: grid;
-    width: 323px;
-    height: 316px;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(5, auto);
-    background: #ffffff;
-    border: 1px solid $disabledGrayColor;
-    border-radius: 10px;
-    padding: 17px 20px 0;
-    justify-items: center;
-    align-items: center;
-}
-
-.calendar__month {
-    grid-column: 1/-1;
-    color: $blueColor;
-    justify-self: left;
-    align-self: start;
-    font-weight: bold;
-}
-
-.calendar__days > span {
-    height: 35px;
-}
-
-.calendar__month--second {
-    position: relative;
-    &::after {
-        content: "";
-        position: absolute;
-        width: 290px;
-        border-bottom: 1px solid #dadada;
-        left: -5px;
-        bottom: -10px;
-    }
-}
-
-.calendar__week-days {
-    grid-row: 2;
-    width: 283px;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-column: 1/-1;
-
-    span {
-        font-size: 13px;
-        line-height: 16px;
-        letter-spacing: 0.05em;
-        color: #a3a3a3;
-    }
-}
-
-.calendar__days--first {
-    grid-row: 3;
-}
-
-.calendar__days--second {
-    grid-row: 5;
-}
-
-.calendar__days {
-    width: 283px;
-    grid-column: 1/-1;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-}
-
-.calendar__today {
-    color: $red;
-    font-weight: bold;
-}
-
-.calendar__event {
-    position: relative;
-
-    &::after {
-        content: "";
-        position: absolute;
-        width: 4px;
-        height: 4px;
-        background-color: #36ce00;
-        left: 46px;
-        bottom: 10px;
-        border-radius: 10px;
-    }
-}
-
-.calendar__last-day {
-    color: $disabledGrayColor;
-}
-
-.calendar__day-off {
-    color: $lightGrayColor;
-}
-
-.event {
-    &::after {
-        content: "";
-        position: absolute;
-        width: 4px;
-        height: 4px;
-        color: $green;
-    }
 }
 
 /*tabs*/
@@ -289,7 +186,6 @@ ul.tabs-list--active {
 .tabs__list {
     display: none;
     position: absolute;
-    grid-area: 2/1/3/-1;
     padding: 14px 9px;
     border-radius: 10px;
     border: 0.6px solid #c4c4c4;
@@ -299,15 +195,26 @@ ul.tabs-list--active {
     top: -10px;
 }
 
-.tabs_requests-item {
+.tabs-requests-list {
+    grid-area: 2/1/3/-1;
+}
+
+.tabs__item {
     border-radius: 10px;
     background-color: #f7f9fe;
     border: 0.6px solid #c4c4c4;
     align-items: center;
-
 }
 
-.tabs_requests-link, .tabs_events-link {
+.tabs__date {
+    color: $darkGray;
+}
+
+.tabs__link {
+    align-items: center;
+}
+
+.tabs__link, .tabs_events-link {
     display: grid;
     position: relative;
     grid-template-columns: 75px 1fr 175px;
@@ -342,11 +249,11 @@ ul.tabs-list--active {
     }
 }
 
-.tabs_requests-item:not(:last-child) {
+.tabs__item:not(:last-child) {
     margin-bottom: 10px;
 }
 
-.tabs_requests-item--number {
+.tabs__item--number {
     font-size: 16px;
     line-height: 20px;
     color: #13377d;

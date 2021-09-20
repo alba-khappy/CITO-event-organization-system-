@@ -1,0 +1,20 @@
+@import "general.scss";
+
+
+.tasks-container {
+    display: grid;
+    grid-template-columns: 385px 1fr;
+    padding: 20px 120px;
+}
+
+.tabs-tasks-list {
+    grid-area: 2/2/3/3;
+}
+
+.tasks--calendar-position {
+    grid-area: 2/1/3/2;
+}
+
+.tasks-heading--margin {
+    margin-bottom: 30px;
+}

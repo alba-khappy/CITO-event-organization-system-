@@ -1,0 +1,109 @@
+@import "general.scss";
+/*calendar*/
+
+.calendar {
+    // grid-row: 3;
+    display: grid;
+    width: 323px;
+    height: 316px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, auto);
+    background: #ffffff;
+    border: 1px solid $disabledGrayColor;
+    border-radius: 10px;
+    padding: 17px 20px 0;
+    justify-items: center;
+    align-items: center;
+}
+
+.calendar__month {
+    grid-column: 1/-1;
+    color: $blueColor;
+    justify-self: left;
+    align-self: start;
+    font-weight: bold;
+}
+
+.calendar__days > span {
+    height: 35px;
+}
+
+.calendar__month--second {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 290px;
+        border-bottom: 1px solid #dadada;
+        left: -5px;
+        bottom: -10px;
+    }
+}
+
+.calendar__week-days {
+    grid-row: 2;
+    width: 283px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-column: 1/-1;
+
+    span {
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.05em;
+        color: #a3a3a3;
+    }
+}
+
+.calendar__days--first {
+    grid-row: 3;
+}
+
+.calendar__days--second {
+    grid-row: 5;
+}
+
+.calendar__days {
+    width: 283px;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar__today {
+    color: $red;
+    font-weight: bold;
+}
+
+.calendar__event {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background-color: #36ce00;
+        left: 46px;
+        bottom: 10px;
+        border-radius: 10px;
+    }
+}
+
+.calendar__last-day {
+    color: $disabledGrayColor;
+}
+
+.calendar__day-off {
+    color: $lightGrayColor;
+}
+
+.event {
+    &::after {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        color: $green;
+    }
+}

@@ -10,7 +10,7 @@ const select = document.querySelector('.select__main-item');
         tabsRequests.classList.remove("tabs--active");
         tabsEventsList.classList.add("tabs-list--active");
         tabsRequestsList.classList.remove("tabs-list--active");
-        select.style.display = "none";
+        // select.style.display = "none";
     });
 
 
@@ -19,6 +19,6 @@ const select = document.querySelector('.select__main-item');
         tabsEvents.classList.remove("tabs--active");
         tabsRequestsList.classList.add("tabs-list--active");
         tabsEventsList.classList.remove("tabs-list--active");
-        select.style.display = "block";
+        // select.style.display = "block";
     });
  

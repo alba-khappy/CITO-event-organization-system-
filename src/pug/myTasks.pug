@@ -1,0 +1,37 @@
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title= "Event organization system"
+    link(rel='stylesheet', href='./main.css', type='text/css')
+
+  body
+      include header.pug
+      include breadcrumbs.pug
+      section.tasks
+        div.container.tasks-container
+            h1.main-heading.tasks-heading--margin Мои задачи
+            div.tasks--calendar-position
+                include calendar.pug
+            ul.tabs-tasks-list
+                    li.tabs__item
+                        a(href="").tabs__link.tabs-link--1
+                            img(src="./images/require-icon.svg", alt="")
+                            p.tabs__item--number Заявка №1
+                            div.tabs__date  
+                                span 25 / 08 / 2021 
+                                span 13:00
+                    li.tabs__item
+                        a(href="").tabs__link.tabs-link--1
+                            img(src="./images/require-icon.svg", alt="")
+                            p.tabs__item--number Заявка №1
+                            div.tabs__date  
+                                span 25 / 08 / 2021 
+                                span 13:00
+                    li.tabs__item
+                        a(href="").tabs__link.tabs-link--1
+                            img(src="./images/require-icon.svg", alt="")
+                            p.tabs__item--number Заявка №1
+                            div.tabs__date  
+                                span 25 / 08 / 2021 
+                                span 13:00
