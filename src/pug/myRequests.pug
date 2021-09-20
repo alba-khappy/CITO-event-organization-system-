@@ -11,68 +11,120 @@ html(lang="ru")
       section.requests 
         .container.request-container 
             h1.main-heading.request-heading--margin Мои заявки
-            div.requests-wrapper
+            
+            div.request__profile-info
                 img(src="./images/avatar.png", alt="photo").request__profile-photo
-                p.request__profile-name Иванов Иван Иванович
-                div.request__select 
-                    .select__main-item Заявка в пропускное бюро
-                    ul.select__items
-                        li.select__item Заявка в пропускное бюро
-                        li.select__item Заявка в пропускное бюро
-                        li.select__item Заявка в пропускное бюро
+                p.request__profile-surname Иванов 
+                p.request__profile-name Иван Иванович
+            div.request__select 
+                .select__main-item Заявка в пропускное бюро
+                ul.select__items
+                    li.select__item Заявка в типографию
+                    li.select__item Заявка в пропускное бюро
+                    li.select__item Заявка на ВКС
 
                     
-                button.requests__add-request Создать
+            button.requests__add-request Создать
             
             div.calendar
-                p.calendar__month Август 2021
-                p.calendar__week-day ПН
-                p.calendar__week-day ВТ
-                p.calendar__week-day СР
-                p.calendar__week-day ЧТ
-                p.calendar__week-day ПТ
-                p.calendar__week-day СБ
-                p.calendar__week-day ВС
-                p 16
-                p 17
-                p 18
-                p 19
-                p.calendar__today 20
-                p 21
-                p 22
-                p 23
-                p 24
-                p.event 25
-                p 26
-                p 27
-                p 28
-                p 29
-                p 30
-                p 31
-                p.calendar__month.calendar__month--second Сентябрь
-                p 1
-                p 2
-                p 3
-                p 4
-                p 5
-                p 6
-                p 7
-                p 8
-                p 9
-                p 10
-                p 11
-                p 12
+                div.calendar__month Август 
+                    span 2021 
 
+                .calendar__week-days 
+                    p ПН
+                    p ВТ
+                    p СР
+                    p ЧТ
+                    p ПТ
+                    p СБ
+                    p ВС
+                div.calendar__days.calendar__days--first
+                    p 16
+                    p 17
+                    p 18
+                    p 19
+                    p.calendar__today 20
+                    p 21
+                    p 22
+                    p 23
+                    p 24
+                    p.event 25
+                    p 26
+                    p 27
+                    p 28
+                    p 29
+                    p 30
+                    p 31
+                div.calendar__month.calendar__month--second Сентябрь
+                div.calendar__days.calendar__days--second 
+                    p 1
+                    p 2
+                    p 3
+                    p 4
+                    p 5
+                    p 6
+                    p 7
+                    p 8
+                    p 9
+                    p 10
+                    p 11
+                    p 12
 
 
             div.time
-            .tabs
-                .tabs_requests Заявки
-                .tabs_events Мероприятия
+                p.time--disabled 09.00-09.30
+                p 09.00-09.30
+                p 09.00-09.30
+                p 09.00-09.30
+                p 09.00-09.30
+                p 09.00-09.30
+                p 09.00-09.30
+                p.time--disabled 09.00-09.30
+                p 09.00-09.30
+                p 09.00-09.30
+                p 09.00-09.30
+                p 09.00-09.30
+                p.time--disabled 09.00-09.30
+                p 09.00-09.30
+                p.time--event 09.00-09.30
+                p.time--event 09.00-09.30
+                p 09.00-09.30
+                p.time--disabled 09.00-09.30
+                p.time--disabled 09.00-09.30
+                p 09.00-09.30
+                p 09.00-09.30
+                
+
+            div.tabs
+                .tabs_requests.tabs-style.tabs--active Заявки
+                .tabs_events.tabs-style Мероприятия
                 ul.tabs_requests-list
                     li.tabs_requests-item
+                        img(src="./images/require-icon.svg", alt="")
+                        p.tabs_requests-item--number Заявка №1
+                        div 
+                            span 25 / 08 / 2021 
+                            span 13:00
                     li.tabs_requests-item
+                        img(src="./images/require-icon.svg", alt="")
+                        p.tabs_requests-item--number Заявка №1
+                        div 
+                            span 25 / 08 / 2021 
+                            span 13:00
+
                     li.tabs_requests-item
+                        img(src="./images/require-icon.svg", alt="")
+                        p.tabs_requests-item--number Заявка №1
+                        div 
+                            span 25 / 08 / 2021 
+                            span 13:00
+
+                    li.tabs_requests-item
+                        img(src="./images/require-icon.svg", alt="")
+                        p.tabs_requests-item--number Заявка №1
+                        div 
+                            span 25 / 08 / 2021 
+                            span 13:00
 
 
 
