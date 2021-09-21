@@ -41,13 +41,13 @@ html(lang="ru")
                     
 
                     div.checkbox.provision__checkbox
-                        input(type="checkbox", name="agreements")#checkbox-1.visually-hidden
+                        input(type="checkbox", name="provision")#checkbox-1.visually-hidden
                         label(for="checkbox-1") Вода
                     div.checkbox.provision__checkbox
-                        input(type="checkbox", name="agreements")#checkbox-2.visually-hidden
+                        input(type="checkbox", name="provision")#checkbox-2.visually-hidden
                         label(for="checkbox-2") Канцелярские принадлежности
                     div.checkbox.provision__checkbox
-                        input(type="checkbox", name="agreements")#checkbox-3.visually-hidden
+                        input(type="checkbox", name="provision")#checkbox-3.visually-hidden
                         label(for="checkbox-3") Пресса
 
                 .provision__button-container 
@@ -72,7 +72,10 @@ html(lang="ru")
                             tr
                                 td Сидоров С. А.
                                 td ЦИТО
-                                td sidorov@gmail.ru
+                                td 
+                                    div.checkbox
+                                        input(type="checkbox", name="agreements")#checkbox-4.visually-hidden
+                                        label(for="checkbox-4") 
                                 td 
                                 td 
                             tr
@@ -92,7 +95,36 @@ html(lang="ru")
         
         div.container.event-container 
                 h2.h2-style.event__h2 ВКС
-                h2.h2-style.event__h2 Параметры конференции
+                h2 Параметры конференции
+                div 
+                    div.checkbox.provision__checkbox
+                        input(type="checkbox", name="provision")#checkbox-3.visually-hidden
+                        label(for="checkbox-3") Закрытая
+                    div.checkbox.provision__checkbox
+                        input(type="checkbox", name="provision")#checkbox-3.visually-hidden
+                        label(for="checkbox-3") Видео-запись
+                    div.checkbox.provision__checkbox
+                        input(type="checkbox", name="provision")#checkbox-3.visually-hidden
+                        label(for="checkbox-3") Аудио-запись
+                    div.checkbox.provision__checkbox
+                        input(type="checkbox", name="provision")#checkbox-3.visually-hidden
+                        label(for="checkbox-3") Внешняя трансляция
+                    div.checkbox.provision__checkbox
+                        input(type="checkbox", name="provision")#checkbox-3.visually-hidden
+                        label(for="checkbox-3") Открытая
+
+                div
+                    input(type="number", placeholder="Количество докладчиков").input-style
+                    div.input-style Удаленно
+                        ul 
+                            li 
+                            li 
+                            li 
+                            li 
+                    input(type="file", placeholder="" multiple="multiple")#add-file.input-style
+                    label(for="add-file") Прикрепить файл
+
+
     
 script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript")
                 

@@ -91,12 +91,14 @@ $orange: #ff7a00;
     text-align: center;
     border-radius: 100px;
     align-self: end;
-    padding: 10px 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border: none;
     color: $white;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.01em;
+    white-space: nowrap;
 }
 
 .visually-hidden {

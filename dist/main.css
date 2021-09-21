@@ -97,12 +97,14 @@ body {
   border-radius: 100px;
   -ms-flex-item-align: end;
   align-self: end;
-  padding: 10px 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border: none;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 .visually-hidden {
@@ -293,7 +295,7 @@ body {
   content: "";
   position: absolute;
   left: -43px;
-  top: 2px;
+  top: 0px;
   width: 18px;
   height: 18px;
   border: 1px solid #a3a3a3;
@@ -304,7 +306,7 @@ body {
   content: "";
   position: absolute;
   left: -42px;
-  top: 3px;
+  top: 1px;
   width: 18px;
   height: 18px;
   background-image: url("../images/check.svg");
@@ -442,12 +444,14 @@ body {
   border-radius: 100px;
   -ms-flex-item-align: end;
   align-self: end;
-  padding: 10px 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border: none;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 .visually-hidden {
@@ -585,12 +589,14 @@ body {
   border-radius: 100px;
   -ms-flex-item-align: end;
   align-self: end;
-  padding: 10px 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border: none;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 .visually-hidden {
@@ -801,12 +807,14 @@ body {
   border-radius: 100px;
   -ms-flex-item-align: end;
   align-self: end;
-  padding: 10px 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border: none;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 .visually-hidden {
@@ -920,12 +928,14 @@ body {
   border-radius: 100px;
   -ms-flex-item-align: end;
   align-self: end;
-  padding: 10px 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border: none;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 .visually-hidden {
@@ -1071,12 +1081,14 @@ body {
   border-radius: 100px;
   -ms-flex-item-align: end;
   align-self: end;
-  padding: 10px 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border: none;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 .visually-hidden {
@@ -1476,12 +1488,14 @@ body {
   border-radius: 100px;
   -ms-flex-item-align: end;
   align-self: end;
-  padding: 10px 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border: none;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 .visually-hidden {
@@ -1613,12 +1627,14 @@ body {
   border-radius: 100px;
   -ms-flex-item-align: end;
   align-self: end;
-  padding: 10px 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border: none;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 .visually-hidden {
@@ -1733,12 +1749,14 @@ body {
   border-radius: 100px;
   -ms-flex-item-align: end;
   align-self: end;
-  padding: 10px 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border: none;
   color: #ffffff;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 .visually-hidden {
