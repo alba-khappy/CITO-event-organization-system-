@@ -1,0 +1,234 @@
+@import "general.scss";
+
+.event-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding: 20px 120px;
+}
+
+.event-container--options {
+    grid-template-rows: repeat(7, auto);
+    row-gap: 10px;
+}
+
+.event-heading--margin {
+    margin-bottom: 20px;
+}
+
+.event--initiator-event {
+    grid-area: 2/1/3/2;
+}
+
+.event__h3--event {
+    grid-area: 5/1/6/2;
+}
+
+.event__input--event-name {
+    grid-area: 6/1/7/2;
+}
+
+.event__input--quantity {
+    grid-area: 7/1/8/2;
+}
+
+.event--calendar-position {
+    grid-area: 2/2/7/3;
+}
+
+.event__input--duration {
+    grid-area: 3/3/4/4;
+}
+
+.event__input--time {
+    grid-area: 4/3/5/4;
+}
+
+.event__h3--duration {
+    grid-area: 2/3/3/4;
+}
+
+.event--duration {
+    grid-area: 2/3/3/4;
+}
+
+.event__h3 {
+    margin-bottom: 10px;
+}
+
+.event__h3--initiator {
+    grid-area: 2/1/3/2;
+}
+
+.event__input--name {
+    grid-area: 3/1/4/2;
+}
+
+.event__input--post {
+    grid-area: 4/1/5/2;
+}
+
+.event__h2 {
+    grid-area: 1/1/2/4;
+    position: relative;
+    line-height: 70px;
+
+    &::after {
+        content: "";
+        grid-area: 1/1/2/4;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        border-top: 1px solid #dadada;
+        left: 0;
+    }
+}
+
+/*meeting-room*/
+
+.event__meeting-room--link {
+    position: relative;
+    background-repeat: no-repeat;
+    width: 370px;
+    height: 230px;
+    grid-row: 2;
+
+    &:hover {
+        &::after {
+            content: "Переговорная №2";
+            position: absolute;
+            font-size: 18px;
+            color: $blueColor;
+            left: 100px;
+            bottom: 20px;
+            z-index: 11;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.8);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+        }
+    }
+}
+
+.event__meeting-room--link-1 {
+    background-image: url("../images/meeting-room-1.jpg");
+}
+
+.event__meeting-room--link-2 {
+    background-image: url("../images/meeting-room-2.jpg");
+}
+
+.event__meeting-room--link-3 {
+    background-image: url("../images/meeting-room-2.jpg");
+}
+
+/*provision*/
+
+.provision__checkbox-container {
+    grid-area: 2/1/3/2;
+}
+
+.provision__button-container {
+    grid-area: 3/1/4/2;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+
+#map {
+    grid-area: 1/2/4/4;
+    width: 785px;
+    height: 300px;
+}
+
+.button-share {
+    max-width: 212px;
+}
+
+/*checkbox*/
+
+.provision__checkbox {
+    margin-bottom: 20px;
+}
+
+.checkbox {
+    padding-left: 40px;
+}
+
+.checkbox label {
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 18px;
+    color: $blackColor;
+  }
+  
+  .checkbox label::before {
+    content: "";
+    position: absolute;
+    left: -43px;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid $lightGrayColor;
+    border-radius: 4px;
+  }
+  
+  .checkbox input:checked + label::after {
+    content: "";
+    position: absolute;
+    left: -42px;
+    top: 3px;
+    width: 18px;
+    height: 18px;
+    background-image: url("../images/check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+/*memebers*/
+
+.members__table-container {
+    grid-column: 1/-1;
+    border: 0.6px solid #c4c4c4;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.members__table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid transparent; 
+    
+    th, td {
+    border: 0.6px solid #c4c4c4;
+    padding: 16px 35px;
+    }
+
+    thead > tr > td {
+        background-color: #F7F9FE;
+        color: $blueColor;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+.table__heading {
+    grid-row: 1;
+}
+
+.button-add-member {
+    grid-row: 3;
+    max-width: 232px;
+}
+
+

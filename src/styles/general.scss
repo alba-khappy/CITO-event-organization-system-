@@ -13,27 +13,23 @@ li {
 }
 
 @font-face {
-    font-family: "Geometria"; 
-    src:
-    url("../fonts/Geometria-Regular.woff") format("woff"),
-    url("../fonts/Geometria-Regular.woff2") format("woff2");
-    font-style: normal; 
-    font-weight: normal; 
-    }
+    font-family: "Geometria";
+    src: url("../fonts/Geometria-Regular.woff") format("woff"), url("../fonts/Geometria-Regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: normal;
+}
 
 @font-face {
-        font-family: "Geometria"; 
-        src:
-        url("../fonts/Geometria-Bold.woff") format("woff"),
-        url("../fonts/Geometria-Bold.woff2") format("woff2");
-        font-style: normal; 
-        font-weight: bold; 
-        }
+    font-family: "Geometria";
+    src: url("../fonts/Geometria-Bold.woff") format("woff"), url("../fonts/Geometria-Bold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: bold;
+}
 
 body {
     display: flex;
     flex-direction: column;
-    font-family: "Geometria", serif; 
+    font-family: "Geometria", serif;
     font-size: 16px;
     font-weight: 400;
 }
@@ -48,13 +44,70 @@ $blackColor: #000000;
 $darkGray: #58595b;
 $disabledGrayColor: #dadada;
 $lightGrayColor: #a3a3a3;
-$white: #FFFFFF;
-$red: #E22020;
-$green:#36CE00;
-$orange: #FF7A00;
+$white: #ffffff;
+$red: #e22020;
+$green: #36ce00;
+$orange: #ff7a00;
 
 .main-heading {
     font-weight: bold;
     font-size: 36px;
     color: $darkGray;
 }
+
+.input-style {
+    max-width: 400px;
+    max-height: 52px;
+    background: #f7f9fe;
+    border: 0.6px solid #c4c4c4;
+    border-radius: 10px;
+    padding: 16px;
+
+    &::placeholder {
+        font-family: "Geometria", serif;
+    }
+
+    &:focus {
+        outline: none;
+        border: 0.6px solid $blueColor;
+    }
+}
+
+.h3-style {
+    font-weight: 400;
+    font-size: 18px;
+    color: $blueColor;
+}
+
+.h2-style {
+    font-weight: 700;
+    font-size: 24px;
+    color: $blueColor;
+}
+
+.blue-button-style {
+    font-family: "Geometria", serif;
+    background-color: $blueColor;
+    text-align: center;
+    border-radius: 100px;
+    align-self: end;
+    padding: 10px 50px;
+    border: none;
+    color: $white;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }

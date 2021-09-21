@@ -1,8 +1,8 @@
 @import "general.scss";
+
 /*calendar*/
 
 .calendar {
-    // grid-row: 3;
     display: grid;
     width: 323px;
     height: 316px;
@@ -96,14 +96,4 @@
 
 .calendar__day-off {
     color: $lightGrayColor;
-}
-
-.event {
-    &::after {
-        content: "";
-        position: absolute;
-        width: 4px;
-        height: 4px;
-        color: $green;
-    }
 }

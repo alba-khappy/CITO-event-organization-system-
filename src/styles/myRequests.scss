@@ -38,18 +38,8 @@
     margin-right: 15px;
 }
 
-.requests__add-request {
-    font-family: "Geometria", serif;
+.button-create {  
     grid-area: 2/4/3/5;
-    background-color: $blueColor;
-    border-radius: 100px;
-    align-self: end;
-    padding: 10px 50px;
-    border: none;
-    color: $white;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0.01em;
     margin-bottom: 10px;
 }
 
@@ -214,7 +204,7 @@ ul.tabs-list--active {
     align-items: center;
 }
 
-.tabs__link, .tabs_events-link {
+.tabs__link {
     display: grid;
     position: relative;
     grid-template-columns: 75px 1fr 175px;
@@ -231,19 +221,19 @@ ul.tabs-list--active {
     }
 }
 
-.tabs-link--1 {
+.tabs-link--medium-priority {
     &::after {
         background-color: $orange;
     }
 }
 
-.tabs-link--2 {
+.tabs-link--high-priority {
     &::after {
         background-color: $red;
     }
 }
 
-.tabs-link--3 {
+.tabs-link--low-priority {
     &::after {
         background-color: $green;
     }

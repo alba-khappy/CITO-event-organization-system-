@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -47,6 +48,420 @@ body {
   font-weight: bold;
   font-size: 36px;
   color: #58595b;
+}
+
+.input-style {
+  max-width: 400px;
+  max-height: 52px;
+  background: #f7f9fe;
+  border: 0.6px solid #c4c4c4;
+  border-radius: 10px;
+  padding: 16px;
+}
+.input-style::-webkit-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::-moz-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style:-ms-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::-ms-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style:focus {
+  outline: none;
+  border: 0.6px solid #13377d;
+}
+
+.h3-style {
+  font-weight: 400;
+  font-size: 18px;
+  color: #13377d;
+}
+
+.h2-style {
+  font-weight: 700;
+  font-size: 24px;
+  color: #13377d;
+}
+
+.blue-button-style {
+  font-family: "Geometria", serif;
+  background-color: #13377d;
+  text-align: center;
+  border-radius: 100px;
+  -ms-flex-item-align: end;
+  align-self: end;
+  padding: 10px 50px;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.event-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  padding: 20px 120px;
+}
+
+.event-container--options {
+  grid-template-rows: repeat(7, auto);
+  row-gap: 10px;
+}
+
+.event-heading--margin {
+  margin-bottom: 20px;
+}
+
+.event--initiator-event {
+  grid-area: 2/1/3/2;
+}
+
+.event__h3--event {
+  grid-area: 5/1/6/2;
+}
+
+.event__input--event-name {
+  grid-area: 6/1/7/2;
+}
+
+.event__input--quantity {
+  grid-area: 7/1/8/2;
+}
+
+.event--calendar-position {
+  grid-area: 2/2/7/3;
+}
+
+.event__input--duration {
+  grid-area: 3/3/4/4;
+}
+
+.event__input--time {
+  grid-area: 4/3/5/4;
+}
+
+.event__h3--duration {
+  grid-area: 2/3/3/4;
+}
+
+.event--duration {
+  grid-area: 2/3/3/4;
+}
+
+.event__h3 {
+  margin-bottom: 10px;
+}
+
+.event__h3--initiator {
+  grid-area: 2/1/3/2;
+}
+
+.event__input--name {
+  grid-area: 3/1/4/2;
+}
+
+.event__input--post {
+  grid-area: 4/1/5/2;
+}
+
+.event__h2 {
+  grid-area: 1/1/2/4;
+  position: relative;
+  line-height: 70px;
+}
+.event__h2::after {
+  content: "";
+  grid-area: 1/1/2/4;
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #dadada;
+  left: 0;
+}
+
+/*meeting-room*/
+.event__meeting-room--link {
+  position: relative;
+  background-repeat: no-repeat;
+  width: 370px;
+  height: 230px;
+  grid-row: 2;
+}
+.event__meeting-room--link:hover::after {
+  content: "Переговорная №2";
+  position: absolute;
+  font-size: 18px;
+  color: #13377d;
+  left: 100px;
+  bottom: 20px;
+  z-index: 11;
+}
+.event__meeting-room--link:hover::before {
+  content: "";
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.event__meeting-room--link-1 {
+  background-image: url("../images/meeting-room-1.jpg");
+}
+
+.event__meeting-room--link-2 {
+  background-image: url("../images/meeting-room-2.jpg");
+}
+
+.event__meeting-room--link-3 {
+  background-image: url("../images/meeting-room-2.jpg");
+}
+
+/*provision*/
+.provision__checkbox-container {
+  grid-area: 2/1/3/2;
+}
+
+.provision__button-container {
+  grid-area: 3/1/4/2;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+}
+
+#map {
+  grid-area: 1/2/4/4;
+  width: 785px;
+  height: 300px;
+}
+
+.button-share {
+  max-width: 212px;
+}
+
+/*checkbox*/
+.provision__checkbox {
+  margin-bottom: 20px;
+}
+
+.checkbox {
+  padding-left: 40px;
+}
+
+.checkbox label {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.checkbox label::before {
+  content: "";
+  position: absolute;
+  left: -43px;
+  top: 2px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #a3a3a3;
+  border-radius: 4px;
+}
+
+.checkbox input:checked + label::after {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 3px;
+  width: 18px;
+  height: 18px;
+  background-image: url("../images/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*memebers*/
+.members__table-container {
+  grid-column: 1/-1;
+  border: 0.6px solid #c4c4c4;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.members__table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid transparent;
+}
+.members__table th, .members__table td {
+  border: 0.6px solid #c4c4c4;
+  padding: 16px 35px;
+}
+.members__table thead > tr > td {
+  background-color: #F7F9FE;
+  color: #13377d;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.table__heading {
+  grid-row: 1;
+}
+
+.button-add-member {
+  grid-row: 3;
+  max-width: 232px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+@font-face {
+  font-family: "Geometria";
+  src: url("../fonts/Geometria-Regular.woff") format("woff"), url("../fonts/Geometria-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Geometria";
+  src: url("../fonts/Geometria-Bold.woff") format("woff"), url("../fonts/Geometria-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: bold;
+}
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-family: "Geometria", serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.main-heading {
+  font-weight: bold;
+  font-size: 36px;
+  color: #58595b;
+}
+
+.input-style {
+  max-width: 400px;
+  max-height: 52px;
+  background: #f7f9fe;
+  border: 0.6px solid #c4c4c4;
+  border-radius: 10px;
+  padding: 16px;
+}
+.input-style::-webkit-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::-moz-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style:-ms-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::-ms-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style:focus {
+  outline: none;
+  border: 0.6px solid #13377d;
+}
+
+.h3-style {
+  font-weight: 400;
+  font-size: 18px;
+  color: #13377d;
+}
+
+.h2-style {
+  font-weight: 700;
+  font-size: 24px;
+  color: #13377d;
+}
+
+.blue-button-style {
+  font-family: "Geometria", serif;
+  background-color: #13377d;
+  text-align: center;
+  border-radius: 100px;
+  -ms-flex-item-align: end;
+  align-self: end;
+  padding: 10px 50px;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .breadcrumbs {
@@ -123,6 +538,75 @@ body {
   color: #58595b;
 }
 
+.input-style {
+  max-width: 400px;
+  max-height: 52px;
+  background: #f7f9fe;
+  border: 0.6px solid #c4c4c4;
+  border-radius: 10px;
+  padding: 16px;
+}
+.input-style::-webkit-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::-moz-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style:-ms-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::-ms-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style:focus {
+  outline: none;
+  border: 0.6px solid #13377d;
+}
+
+.h3-style {
+  font-weight: 400;
+  font-size: 18px;
+  color: #13377d;
+}
+
+.h2-style {
+  font-weight: 700;
+  font-size: 24px;
+  color: #13377d;
+}
+
+.blue-button-style {
+  font-family: "Geometria", serif;
+  background-color: #13377d;
+  text-align: center;
+  border-radius: 100px;
+  -ms-flex-item-align: end;
+  align-self: end;
+  padding: 10px 50px;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*calendar*/
 .calendar {
   display: grid;
@@ -194,7 +678,7 @@ body {
 }
 
 .calendar__today {
-  color: #E22020;
+  color: #e22020;
   font-weight: bold;
 }
 
@@ -219,13 +703,124 @@ body {
 .calendar__day-off {
   color: #a3a3a3;
 }
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-.event::after {
-  content: "";
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+@font-face {
+  font-family: "Geometria";
+  src: url("../fonts/Geometria-Regular.woff") format("woff"), url("../fonts/Geometria-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Geometria";
+  src: url("../fonts/Geometria-Bold.woff") format("woff"), url("../fonts/Geometria-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: bold;
+}
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-family: "Geometria", serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.main-heading {
+  font-weight: bold;
+  font-size: 36px;
+  color: #58595b;
+}
+
+.input-style {
+  max-width: 400px;
+  max-height: 52px;
+  background: #f7f9fe;
+  border: 0.6px solid #c4c4c4;
+  border-radius: 10px;
+  padding: 16px;
+}
+.input-style::-webkit-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::-moz-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style:-ms-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::-ms-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style:focus {
+  outline: none;
+  border: 0.6px solid #13377d;
+}
+
+.h3-style {
+  font-weight: 400;
+  font-size: 18px;
+  color: #13377d;
+}
+
+.h2-style {
+  font-weight: 700;
+  font-size: 24px;
+  color: #13377d;
+}
+
+.blue-button-style {
+  font-family: "Geometria", serif;
+  background-color: #13377d;
+  text-align: center;
+  border-radius: 100px;
+  -ms-flex-item-align: end;
+  align-self: end;
+  padding: 10px 50px;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+}
+
+.visually-hidden {
   position: absolute;
-  width: 4px;
-  height: 4px;
-  color: #36CE00;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 * {
   margin: 0;
@@ -277,55 +872,74 @@ body {
   font-size: 36px;
   color: #58595b;
 }
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
 
-a {
-  text-decoration: none;
+.input-style {
+  max-width: 400px;
+  max-height: 52px;
+  background: #f7f9fe;
+  border: 0.6px solid #c4c4c4;
+  border-radius: 10px;
+  padding: 16px;
 }
-
-li {
-  list-style-type: none;
-}
-
-@font-face {
-  font-family: "Geometria";
-  src: url("../fonts/Geometria-Regular.woff") format("woff"), url("../fonts/Geometria-Regular.woff2") format("woff2");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "Geometria";
-  src: url("../fonts/Geometria-Bold.woff") format("woff"), url("../fonts/Geometria-Bold.woff2") format("woff2");
-  font-style: normal;
-  font-weight: bold;
-}
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.input-style::-webkit-input-placeholder {
   font-family: "Geometria", serif;
-  font-size: 16px;
+}
+.input-style::-moz-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style:-ms-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::-ms-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style:focus {
+  outline: none;
+  border: 0.6px solid #13377d;
+}
+
+.h3-style {
   font-weight: 400;
+  font-size: 18px;
+  color: #13377d;
 }
 
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
+.h2-style {
+  font-weight: 700;
+  font-size: 24px;
+  color: #13377d;
 }
 
-.main-heading {
-  font-weight: bold;
-  font-size: 36px;
-  color: #58595b;
+.blue-button-style {
+  font-family: "Geometria", serif;
+  background-color: #13377d;
+  text-align: center;
+  border-radius: 100px;
+  -ms-flex-item-align: end;
+  align-self: end;
+  padding: 10px 50px;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .header-container {
@@ -410,6 +1024,75 @@ body {
   color: #58595b;
 }
 
+.input-style {
+  max-width: 400px;
+  max-height: 52px;
+  background: #f7f9fe;
+  border: 0.6px solid #c4c4c4;
+  border-radius: 10px;
+  padding: 16px;
+}
+.input-style::-webkit-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::-moz-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style:-ms-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::-ms-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style:focus {
+  outline: none;
+  border: 0.6px solid #13377d;
+}
+
+.h3-style {
+  font-weight: 400;
+  font-size: 18px;
+  color: #13377d;
+}
+
+.h2-style {
+  font-weight: 700;
+  font-size: 24px;
+  color: #13377d;
+}
+
+.blue-button-style {
+  font-family: "Geometria", serif;
+  background-color: #13377d;
+  text-align: center;
+  border-radius: 100px;
+  -ms-flex-item-align: end;
+  align-self: end;
+  padding: 10px 50px;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .request-container {
   display: grid;
   grid-template-columns: 375px 1fr auto auto;
@@ -448,18 +1131,8 @@ body {
   margin-right: 15px;
 }
 
-.requests__add-request {
-  font-family: "Geometria", serif;
+.button-create {
   grid-area: 2/4/3/5;
-  background-color: #13377d;
-  border-radius: 100px;
-  align-self: end;
-  padding: 10px 50px;
-  border: none;
-  color: #FFFFFF;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0.01em;
   margin-bottom: 10px;
 }
 
@@ -495,7 +1168,7 @@ body {
   align-items: center;
   border: 0.6px solid #c4c4c4;
   border-radius: 10px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #58595b;
 }
 
@@ -513,7 +1186,7 @@ body {
   border: 0.6px solid #c4c4c4;
   border-radius: 10px;
   padding: 16px 20px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   text-align: left;
   color: #58595b;
 }
@@ -586,7 +1259,7 @@ body {
 
 .tabs--active {
   z-index: 10;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   position: relative;
   color: #13377d;
   font-size: 18px;
@@ -631,13 +1304,13 @@ ul.tabs-list--active {
   align-items: center;
 }
 
-.tabs__link, .tabs_events-link {
+.tabs__link {
   display: grid;
   position: relative;
   grid-template-columns: 75px 1fr 175px;
   padding: 26px 30px;
 }
-.tabs__link::after, .tabs_events-link::after {
+.tabs__link::after {
   content: "";
   position: absolute;
   width: 7px;
@@ -647,16 +1320,16 @@ ul.tabs-list--active {
   border-radius: 10px;
 }
 
-.tabs-link--1::after {
-  background-color: #FF7A00;
+.tabs-link--medium-priority::after {
+  background-color: #ff7a00;
 }
 
-.tabs-link--2::after {
-  background-color: #E22020;
+.tabs-link--high-priority::after {
+  background-color: #e22020;
 }
 
-.tabs-link--3::after {
-  background-color: #36CE00;
+.tabs-link--low-priority::after {
+  background-color: #36ce00;
 }
 
 .tabs__item:not(:last-child) {
@@ -700,7 +1373,7 @@ ul.tabs-list--active {
   position: absolute;
   width: 4px;
   height: 4px;
-  background-color: #36CE00;
+  background-color: #36ce00;
   left: 43px;
   bottom: 0;
   border-radius: 10px;
@@ -754,6 +1427,75 @@ body {
   font-weight: bold;
   font-size: 36px;
   color: #58595b;
+}
+
+.input-style {
+  max-width: 400px;
+  max-height: 52px;
+  background: #f7f9fe;
+  border: 0.6px solid #c4c4c4;
+  border-radius: 10px;
+  padding: 16px;
+}
+.input-style::-webkit-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::-moz-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style:-ms-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::-ms-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style:focus {
+  outline: none;
+  border: 0.6px solid #13377d;
+}
+
+.h3-style {
+  font-weight: 400;
+  font-size: 18px;
+  color: #13377d;
+}
+
+.h2-style {
+  font-weight: 700;
+  font-size: 24px;
+  color: #13377d;
+}
+
+.blue-button-style {
+  font-family: "Geometria", serif;
+  background-color: #13377d;
+  text-align: center;
+  border-radius: 100px;
+  -ms-flex-item-align: end;
+  align-self: end;
+  padding: 10px 50px;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .tasks-container {
@@ -824,6 +1566,75 @@ body {
   color: #58595b;
 }
 
+.input-style {
+  max-width: 400px;
+  max-height: 52px;
+  background: #f7f9fe;
+  border: 0.6px solid #c4c4c4;
+  border-radius: 10px;
+  padding: 16px;
+}
+.input-style::-webkit-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::-moz-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style:-ms-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::-ms-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style:focus {
+  outline: none;
+  border: 0.6px solid #13377d;
+}
+
+.h3-style {
+  font-weight: 400;
+  font-size: 18px;
+  color: #13377d;
+}
+
+.h2-style {
+  font-weight: 700;
+  font-size: 24px;
+  color: #13377d;
+}
+
+.blue-button-style {
+  font-family: "Geometria", serif;
+  background-color: #13377d;
+  text-align: center;
+  border-radius: 100px;
+  -ms-flex-item-align: end;
+  align-self: end;
+  padding: 10px 50px;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -873,6 +1684,75 @@ body {
   font-weight: bold;
   font-size: 36px;
   color: #58595b;
+}
+
+.input-style {
+  max-width: 400px;
+  max-height: 52px;
+  background: #f7f9fe;
+  border: 0.6px solid #c4c4c4;
+  border-radius: 10px;
+  padding: 16px;
+}
+.input-style::-webkit-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::-moz-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style:-ms-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::-ms-input-placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style::placeholder {
+  font-family: "Geometria", serif;
+}
+.input-style:focus {
+  outline: none;
+  border: 0.6px solid #13377d;
+}
+
+.h3-style {
+  font-weight: 400;
+  font-size: 18px;
+  color: #13377d;
+}
+
+.h2-style {
+  font-weight: 700;
+  font-size: 24px;
+  color: #13377d;
+}
+
+.blue-button-style {
+  font-family: "Geometria", serif;
+  background-color: #13377d;
+  text-align: center;
+  border-radius: 100px;
+  -ms-flex-item-align: end;
+  align-self: end;
+  padding: 10px 50px;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .header-container {

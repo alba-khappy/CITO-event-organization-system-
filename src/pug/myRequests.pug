@@ -23,7 +23,7 @@ html(lang="ru")
                     li.select__item Заявка в пропускное бюро
                     li.select__item Заявка на ВКС
    
-            button.requests__add-request Создать
+            a(href="addEvent.html").blue-button-style.button-create Создать
             
             div.requests--calendar-position
                 include calendar.pug
@@ -58,22 +58,14 @@ html(lang="ru")
 
                 ul.tabs__list.tabs-requests-list.tabs-list--active
                     li.tabs__item
-                        a(href="").tabs__link.tabs-link--1
+                        a(href="").tabs__link.tabs-link--high-priority
                             img(src="./images/require-icon.svg", alt="")
                             p.tabs__item--number Заявка №1
                             div.tabs__date
                                 span 25 / 08 / 2021 
                                 span 13:00
                     li.tabs__item
-                        a(href="").tabs__link.tabs-link--2 
-                            img(src="./images/require-icon.svg", alt="")
-                            p.tabs__item--number Заявка №1
-                            div.tabs__date
-                                span 25 / 08 / 2021 
-                                span 13:00
-
-                    li.tabs__item
-                        a(href="").tabs__link.tabs-link--3
+                        a(href="").tabs__link.tabs-link--high-priority
                             img(src="./images/require-icon.svg", alt="")
                             p.tabs__item--number Заявка №1
                             div.tabs__date
@@ -81,7 +73,15 @@ html(lang="ru")
                                 span 13:00
 
                     li.tabs__item
-                        a(href="").tabs__link.tabs-link--1
+                        a(href="").tabs__link.tabs-link--low-priority
+                            img(src="./images/require-icon.svg", alt="")
+                            p.tabs__item--number Заявка №1
+                            div.tabs__date
+                                span 25 / 08 / 2021 
+                                span 13:00
+
+                    li.tabs__item
+                        a(href="").tabs__link.tabs-link--medium-priority
                             img(src="./images/require-icon.svg", alt="")
                             p.tabs__item--number Заявка №1
                             div.tabs__date 
@@ -90,22 +90,14 @@ html(lang="ru")
 
                 ul.tabs__list.tabs-events-list
                     li.tabs__item
-                        a(href="").tabs__link.tabs-link--1
+                        a(href="").tabs__link.tabs-link--medium-priority
                             img(src="./images/require-icon.svg", alt="")
                             p.tabs__item--number Мероприятие №1
                             div.tabs__date 
                                 span 25 / 08 / 2021 
                                 span 13:00
                     li.tabs__item
-                        a(href="").tabs__link.tabs-link--2
-                            img(src="./images/require-icon.svg", alt="")
-                            p.tabs__item--number Мероприятие №1
-                            div.tabs__date 
-                                span 25 / 08 / 2021 
-                                span 13:00
-
-                    li.tabs__item
-                        a(href="").tabs__link.tabs-link--3
+                        a(href="").tabs__link.tabs-link--low-priority
                             img(src="./images/require-icon.svg", alt="")
                             p.tabs__item--number Мероприятие №1
                             div.tabs__date 
@@ -113,7 +105,15 @@ html(lang="ru")
                                 span 13:00
 
                     li.tabs__item
-                        a(href="").tabs__link.tabs-link--1
+                        a(href="").tabs__link.tabs-link--medium-priority
+                            img(src="./images/require-icon.svg", alt="")
+                            p.tabs__item--number Мероприятие №1
+                            div.tabs__date 
+                                span 25 / 08 / 2021 
+                                span 13:00
+
+                    li.tabs__item
+                        a(href="").tabs__link.tabs-link--high-priority
                             img(src="./images/require-icon.svg", alt="")
                             p.tabs__item--number Мероприятие №1
                             div.tabs__date 
