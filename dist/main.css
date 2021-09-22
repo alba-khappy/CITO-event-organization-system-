@@ -155,6 +155,9 @@ body {
 
 .event-container--options {
   grid-template-rows: repeat(7, auto);
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
 }
 
 .event-heading--margin {
@@ -918,31 +921,31 @@ body {
   -ms-flex-align: center;
   align-items: center;
 }
-.calendar::after {
-  content: "";
+
+.calendar__button-month {
   position: absolute;
   background-image: url(../images/arrow.svg);
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
-  right: 30px;
-  top: 12px;
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+  background-color: transparent;
+  border: none;
 }
-.calendar::before {
-  content: "";
-  position: absolute;
-  background-image: url(../images/arrow.svg);
-  background-repeat: no-repeat;
-  width: 20px;
-  height: 20px;
+
+.calendar__button-month--prev {
   right: 125px;
   top: 20px;
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+
+.calendar__button-month--next {
+  right: 30px;
+  top: 12px;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .calendar__month {

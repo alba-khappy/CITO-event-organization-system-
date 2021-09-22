@@ -15,30 +15,28 @@
     padding: 17px 20px 0;
     justify-items: center;
     align-items: center;
+}
 
-    &::after {
-        content: "";
-        position: absolute;
-        background-image: url(../images/arrow.svg);
-        background-repeat: no-repeat;
-        width: 20px;
-        height: 20px;
-        right: 30px;
-        top: 12px;
-        transform: rotate(-90deg);
-    }
+.calendar__button-month {
+    position: absolute;
+    background-image: url(../images/arrow.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+}
 
-    &::before {
-        content: "";
-        position: absolute;
-        background-image: url(../images/arrow.svg);
-        background-repeat: no-repeat;
-        width: 20px;
-        height: 20px;
-        right: 125px;
-        top: 20px;
-        transform: rotate(90deg);
-    }
+.calendar__button-month--prev {
+    right: 125px;
+    top: 20px;
+    transform: rotate(90deg);
+}
+
+.calendar__button-month--next {
+    right: 30px;
+    top: 12px;
+    transform: rotate(-90deg);
 }
 
 .calendar__month {
