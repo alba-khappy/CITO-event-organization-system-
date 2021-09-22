@@ -56,15 +56,18 @@ $orange: #ff7a00;
 }
 
 .input-style {
-    max-width: 400px;
+    width: 400px;
     max-height: 52px;
     background: #f7f9fe;
     border: 0.6px solid #c4c4c4;
     border-radius: 10px;
     padding: 16px;
+    font-size: 16px;
+    color: $darkGray;
 
     &::placeholder {
         font-family: "Geometria", serif;
+        color: $darkGray;
     }
 
     &:focus {
@@ -74,7 +77,7 @@ $orange: #ff7a00;
 }
 
 .h3-style {
-    font-weight: 400;
+    font-weight: 700;
     font-size: 18px;
     color: $blueColor;
 }
