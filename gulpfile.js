@@ -16,7 +16,7 @@ const browserSync = require('browser-sync').create();
 
 const clean = () => {
     return del(['dist'])
-}
+};
 
 
 const puggy = () => {
@@ -27,7 +27,7 @@ const puggy = () => {
      }))
      .pipe(dest('dist'))
      .pipe(browserSync.stream())
-    }
+    };
 
 const styles = () => {
     return src('src/styles/**/*.css')
@@ -42,7 +42,7 @@ const styles = () => {
     .pipe(sourcemaps.write())
     .pipe(dest('dist'))
     .pipe(browserSync.stream())
-}
+};
 
 const htmlMinify = ()=> {
     return src('src/**/*.html')
@@ -51,7 +51,7 @@ const htmlMinify = ()=> {
     }))
     .pipe(dest('dist'))
     .pipe(browserSync.stream())
-}
+};
 
 const scss = () => {
     return src('src/styles/*.scss')
@@ -62,12 +62,12 @@ const scss = () => {
     .pipe(concat('main.css'))
     .pipe(dest('dist'))
     .pipe(browserSync.stream())
-}
+};
 
 const fonts = () => {
     return src('src/fonts/**/*')
       .pipe(dest('dist/fonts'))
-}
+};
 
 const scripts = () => {
     return src('src/js/*.js')
@@ -75,14 +75,14 @@ const scripts = () => {
         presets: ['@babel/env']
     }))
     .pipe(sourcemaps.init())
-    .pipe(concat('app.js'))
-    .pipe(uglify({
-        toplevel: true
-    }).on('error', notify.onError()))
+    // .pipe(concat('app.js'))
+    // .pipe(uglify({
+    //     toplevel: true
+    // }).on('error', notify.onError()))
     .pipe(sourcemaps.write())
     .pipe(dest('dist'))
     .pipe(browserSync.stream())
-}
+};
 
 const watchFiles = ()=> {
     browserSync.init({
@@ -90,7 +90,7 @@ const watchFiles = ()=> {
             baseDir:'dist'
         }
     })
-}
+};
 
 const images = () => {
     return src([
@@ -101,10 +101,16 @@ const images = () => {
     ])
     .pipe(image())
     .pipe(dest('dist/images'))
-}
+};
 
 watch('src/pug/**/*.pug', puggy);
 watch('src/**/*.html', htmlMinify);
+watch([
+    'src/images/**/*.jpg',
+    'src/images/**/*.png',
+    'src/images/*.svg',
+    'src/images/**/*.jpeg'
+], images);
 watch('src/styles/*.scss', scss);
 watch('src/styles/*.css', styles);
 watch('src/js/*.js', scripts);

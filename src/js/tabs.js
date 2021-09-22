@@ -2,7 +2,6 @@ const tabsRequests = document.querySelector('.tabs_requests');
 const tabsEvents = document.querySelector('.tabs_events');
 const tabsEventsList = document.querySelector('.tabs-events-list');
 const tabsRequestsList = document.querySelector('.tabs-requests-list');
-const select = document.querySelector('.select__main-item');
 
 
     tabsEvents.addEventListener('click', function(){
