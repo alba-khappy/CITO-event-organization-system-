@@ -6,6 +6,7 @@ html(lang="ru")
     link(rel='stylesheet', href='./main.css', type='text/css')
     
   body
+      include warning.pug
       include header.pug
       include breadcrumbs.pug
       section.event 
@@ -183,6 +184,9 @@ html(lang="ru")
 
         div.container.event-container.event-container--polygraphy
                 h2.h2-style.event__h2 Полиграфия / раздаточный материал
+                div.checkbox.checkbox--without-label#polygraphy-checkbox
+                                        input(type="checkbox", name="agreements")#checkbox-20.visually-hidden
+                                        label(for="checkbox-20").checkbox-label--without-label
                 div.input-style Формат
                     ul 
                         li 
@@ -203,6 +207,9 @@ html(lang="ru")
 
         div.container.event-container.event-container--add-event
             a(href="").blue-button-style.event__button--add-event Cоздать мероприятие
+
+
+
                             
                     
 

@@ -1,0 +1,70 @@
+@import "general.scss";
+
+.warning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+}
+
+.warning--close {
+    display: none;
+}
+
+.warning__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 40px;
+    background-color: $white;
+}
+
+.warning__h1 {
+    justify-self: center;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.07em;
+    color: $darkGray;
+    margin-bottom: 44px;
+}
+
+.warning__text {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 30px;
+
+    span {
+        font-weight: bold;
+    }
+}
+
+.warning__text--bold {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.warning__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    column-gap: 26px;
+    justify-items: center;
+}
+
+.warning__button--argee {
+    width: 100%;
+    grid-area: 1/1/2/2;
+}
+
+.warning__button--disagree {
+    width: 100%;
+    grid-area: 1/2/2/3;
+}

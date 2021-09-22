@@ -6,9 +6,17 @@ html(lang="ru")
     link(rel='stylesheet', href='./main.css', type='text/css')
 
   body
-      a(href="/myRequests.html") Заявки
-      a(href="/myTasks.html") Мои задачи
-         script(src='./app.js')
+
+    div.container.index-container
+      form(action="").index__form 
+        input(type="text", placeholder="Логин").input-style
+        input(type="text", placeholder="Пароль").input-style
+        a(href="/myRequests.html").blue-button-style.index__button-enter Войти
+
+
+        a(href="/myRequests.html") Заявки
+        a(href="/myTasks.html") Мои задачи
+          script(src='./app.js')
      
 
     

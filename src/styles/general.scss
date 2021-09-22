@@ -56,7 +56,8 @@ $orange: #ff7a00;
 }
 
 .input-style {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     max-height: 52px;
     background: #f7f9fe;
     border: 0.6px solid #c4c4c4;
@@ -115,4 +116,21 @@ $orange: #ff7a00;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+  }
+
+  .index-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .index__form {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+  }
+
+  .index__button-enter {
+      padding-left: 45px;
+      padding-right: 45px;
+      margin: 0 auto;
   }

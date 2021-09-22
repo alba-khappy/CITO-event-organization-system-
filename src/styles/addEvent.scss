@@ -84,9 +84,13 @@
 .event__meeting-room--link {
     position: relative;
     background-repeat: no-repeat;
-    width: 370px;
     height: 230px;
     grid-row: 2;
+    background-size: contain;
+
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
 
     &:hover {
         &::after {
@@ -342,10 +346,18 @@
 
 .checkbox--polygraphy {
     grid-area: 3/1/4/2;
+    line-height: 52px;
 }
 
 .input__polygraphy--copies {
     grid-area: 4/1/5/2;
+}
+
+#polygraphy-checkbox {
+    grid-area: 1/1/2/3;
+    align-self: center;
+    justify-self: left;
+    padding-left: 490px;
 }
 
 /*button-add-event*/
@@ -382,8 +394,8 @@
     height: 42px;
     border: 0.6px solid #c4c4c4;
     background-color: #f7f7f7;
-    font-family: "Segoe UI";
-    color: #1f3c44;
+    font-family: "Geometria", serif;
+    color: $darkGray;
     border-radius: 10px;
 }
 
@@ -391,10 +403,6 @@
     display: inline;
     width: 40%;
     margin-bottom: 20px;
-}
-
-#upload-container label {
-    font-weight: bold;
 }
 
 #upload-container label:hover {
@@ -410,15 +418,17 @@
 #upload-container div::after {
     content: "";
     background-image: url("./images/add-file.svg");
+    background-repeat: no-repeat;
     position: absolute;
     width: 18px;
     height: 18px;
     transform: translateX(35px);
+    top: 4px;
 }
 
 #upload-container input[type="file"] {
-    width: 0.1px;
-    height: 0.1px;
+    width: 200px;
+    height: 30px;
     opacity: 0;
     position: absolute;
     z-index: -10;
