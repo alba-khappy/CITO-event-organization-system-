@@ -18,15 +18,14 @@ html(lang="ru")
                 h3.h3-style.event__h3--initiator Инициатор
                 input(type="text", placeholder="ФИО").input-style.event__input--name
                 div.event__input--post 
-                    div.input-style Должность
-                    ul 
-                        li 
-                        li 
-                        li 
-                        li 
+                    div.select__main-item.input-style
+                    ul.select__list.select__list--blue-style.select--close
+                        li.select__item Должность
+                        li.select__item Должность
+                        li.select__item Должность
                 h3.h3-style.event__h3--event Мероприятие
                 input(type="text", placeholder="Название").input-style.event__input--event-name
-                input(type="number", placeholder="Кол-во участников").input-style.event__input--quantity
+                input(type="number", placeholder="Кол-во участников", min="0", max="10000").input-style.event__input--quantity
             div.event--calendar-position
                 include calendar.pug 
             h3.h3-style.event__h3.event__h3--duration Длительность и время мероприятия
@@ -186,7 +185,7 @@ html(lang="ru")
                                         td Доу Д. П.
                                         td Амбрелла
                                         td dou.dp@mail.ru
-                        a(href="").blue-button-style.button-add-member#addDistanceMember Добавить участника
+                        button.blue-button-style.button-add-member#addDistanceMember Добавить участника
 
         div.container.event-container.event-container--polygraphy
                 h2.h2-style.event__h2 Полиграфия / раздаточный материал
@@ -221,6 +220,7 @@ html(lang="ru")
         div.container.event-container.event-container--add-event
             a(href="").blue-button-style.event__button--add-event Cоздать мероприятие
 
+script(src='./select.js')
 script(src='./warning.js')
 script(src='./map.js')
 script(src='./checkbox-sections.js')

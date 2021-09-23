@@ -9,7 +9,6 @@ const tabsRequestsList = document.querySelector('.tabs-requests-list');
         tabsRequests.classList.remove("tabs--active");
         tabsEventsList.classList.add("tabs-list--active");
         tabsRequestsList.classList.remove("tabs-list--active");
-        // select.style.display = "none";
     });
 
 
@@ -18,6 +17,5 @@ const tabsRequestsList = document.querySelector('.tabs-requests-list');
         tabsEvents.classList.remove("tabs--active");
         tabsRequestsList.classList.add("tabs-list--active");
         tabsEventsList.classList.remove("tabs-list--active");
-        // select.style.display = "block";
     });
  

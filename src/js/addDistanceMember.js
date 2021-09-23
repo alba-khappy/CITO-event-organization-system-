@@ -1,11 +1,11 @@
 const buttonAddDistanceMember = document.querySelector('#addDistanceMember');
-const popupAddMember = document.querySelector('#popupAddDistanceMember');
-const closePopupAddMember = document.querySelector('#add-distance-member__button--close');
+const popupAddDistanceAddMember = document.querySelector('#popupAddDistanceMember');
+const closePopupDistanceMember = document.querySelector('#add-distance-member__button--close');
 
 buttonAddDistanceMember.addEventListener('click', function(){
-    popupAddMember.classList.remove("popup--close");
+    popupAddDistanceMember.classList.remove("popup--close");
 });
 
-buttonAddDistanceMember.addEventListener('click', function(){
-    popupAddMember.classList.add("popup--close");
+closePopupDistanceMember.addEventListener('click', function(){
+    popupAddDistanceMember.classList.add("popup--close");
 });

@@ -274,6 +274,11 @@ body {
 
 .event__input--post {
   grid-area: 4/1/5/2;
+  position: relative;
+}
+
+.select__list--blue-style {
+  background-color: #F7F9FE;
 }
 
 .event__h2 {
@@ -483,7 +488,7 @@ body {
 
 .button-add-member {
   display: block;
-  max-width: 232px;
+  width: 232px;
 }
 
 /*parameters*/
@@ -705,7 +710,7 @@ div.close-section {
   -ms-flex-align: center;
   align-items: center;
   width: 500px;
-  height: 790px;
+  row-gap: 12px;
 }
 
 .add-member__button--disagree, .add-member__button--agree {
@@ -1973,6 +1978,10 @@ body {
   grid-area: 2/3/3/4;
   align-self: end;
   margin-right: 15px;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+  position: relative;
 }
 
 .button-create {
@@ -1986,18 +1995,9 @@ body {
 }
 
 /*select*/
-.request__select {
-  display: grid;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: end;
-  position: relative;
-}
-
-.select__items {
+.select__list {
   position: absolute;
   min-width: 400px;
-  right: 0;
   top: 60px;
   z-index: 15;
   list-style: none;
@@ -2013,8 +2013,11 @@ body {
   align-items: center;
   border: 0.6px solid #c4c4c4;
   border-radius: 10px;
-  background-color: #ffffff;
   color: #58595b;
+}
+
+.select__list--white-style {
+  background-color: #ffffff;
 }
 
 .select--close {

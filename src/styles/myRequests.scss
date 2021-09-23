@@ -36,6 +36,8 @@
     grid-area: 2/3/3/4;
     align-self: end;
     margin-right: 15px;
+    justify-content: end;
+    position: relative;
 }
 
 .button-create {  
@@ -50,16 +52,9 @@
 
 /*select*/
 
-.request__select {
-    display: grid;
-    justify-content: end;
-    position: relative;
-}
-
-.select__items {
+.select__list {
     position: absolute;
     min-width: 400px;
-    right: 0;
     top: 60px;
     z-index: 15;
     list-style: none;
@@ -68,8 +63,11 @@
     align-items: center;
     border: 0.6px solid #c4c4c4;
     border-radius: 10px;
-    background-color: $white;
     color: $darkGray;
+}
+
+.select__list--white-style {
+    background-color: $white;
 }
 
 .select--close {
