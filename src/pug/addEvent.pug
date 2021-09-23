@@ -4,6 +4,7 @@ html(lang="ru")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title= "Event organization system"
     link(rel='stylesheet', href='./main.css', type='text/css')
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript")
     
   body
       include warning.pug
@@ -117,45 +118,48 @@ html(lang="ru")
                         
                 a(href="").blue-button-style.button-add-member Добавить участника
         
-        div.container.event-container.event-container--parameters 
+        div.container.event-container
                 
                 h2.h2-style.event__h2 ВКС
                 div.checkbox.checkbox--without-label#parameters-checkbox
                                         input(type="checkbox", name="agreements")#checkbox-19.visually-hidden
                                         label(for="checkbox-19").checkbox-label--without-label
-                h2.h2-style.parameters__h2 Параметры конференции
-                div.parameters__checkbox-container
-                    div.checkbox.checkbox--with-label.parameters__checkbox--1
-                        input(type="checkbox", name="provision")#checkbox-13.visually-hidden
-                        label(for="checkbox-13") Закрытая
-                    div.checkbox.checkbox--with-label.parameters__checkbox--2
-                        input(type="checkbox", name="provision")#checkbox-14.visually-hidden
-                        label(for="checkbox-14") Видео-запись
-                    div.checkbox.checkbox--with-label.parameters__checkbox--3
-                        input(type="checkbox", name="provision")#checkbox-15.visually-hidden
-                        label(for="checkbox-15") Аудио-запись
-                    div.checkbox.checkbox--with-label.parameters__checkbox--4
-                        input(type="checkbox", name="provision")#checkbox-16.visually-hidden
-                        label(for="checkbox-16") Внешняя трансляция
-                    div.checkbox.checkbox--with-label.parameters__checkbox--5
-                        input(type="checkbox", name="provision")#checkbox-17.visually-hidden
-                        label(for="checkbox-17") Открытая
+            
+                div.parameters__inner-container.close-section
+                    h2.h2-style.parameters__h2 Параметры конференции
+                    div.parameters__checkbox-container
+                        div.checkbox.checkbox--with-label.parameters__checkbox--1
+                            input(type="checkbox", name="provision")#checkbox-13.visually-hidden
+                            label(for="checkbox-13") Закрытая
+                        div.checkbox.checkbox--with-label.parameters__checkbox--2
+                            input(type="checkbox", name="provision")#checkbox-14.visually-hidden
+                            label(for="checkbox-14") Видео-запись
+                        div.checkbox.checkbox--with-label.parameters__checkbox--3
+                            input(type="checkbox", name="provision")#checkbox-15.visually-hidden
+                            label(for="checkbox-15") Аудио-запись
+                        div.checkbox.checkbox--with-label.parameters__checkbox--4
+                            input(type="checkbox", name="provision")#checkbox-16.visually-hidden
+                            label(for="checkbox-16") Внешняя трансляция
+                        div.checkbox.checkbox--with-label.parameters__checkbox--5
+                            input(type="checkbox", name="provision")#checkbox-17.visually-hidden
+                            label(for="checkbox-17") Открытая
 
-                div.parameters__info-container
-                    input(type="number", placeholder="Количество докладчиков").input-style
-                    div.input-style Удаленно
-                        ul 
-                            li 
-                            li 
-                            li 
-                            li 
-                    div.parameters__add-file
-                    form#upload-container(method="POST" action="")
-                        div 
-                            input(type="file", name="file", multiple)#file-input
-                            label(for="file-input") Прикрепить файл
+                    div.parameters__info-container
+                        input(type="number", placeholder="Количество докладчиков").input-style
+                        div.input-style Удаленно
+                            ul 
+                                li 
+                                li 
+                                li 
+                                li 
+                        div.parameters__add-file
+                            p Презентация:
+                            form#upload-container(method="POST" action="").parameters__upload-container
+                                div 
+                                    input(type="file", name="file", multiple)#file-input
+                                    label(for="file-input") Прикрепить файл
 
-                        input(type="file", placeholder="" multiple="multiple")#add-file.input-style
+                                input(type="file", placeholder="" multiple="multiple")#add-file.input-style
 
         div.container.event-container 
                 h2.h2-style.event__h2 Участники (удаленно)
@@ -187,40 +191,34 @@ html(lang="ru")
                 div.checkbox.checkbox--without-label#polygraphy-checkbox
                                         input(type="checkbox", name="agreements")#checkbox-20.visually-hidden
                                         label(for="checkbox-20").checkbox-label--without-label
-                div.input-style Формат
-                    ul 
-                        li 
-                        li 
-                        li 
-                        li 
-                div.input-style Плотность бумаги
-                    ul 
-                        li 
-                        li 
-                        li 
-                        li
-                    
-                div.checkbox.checkbox--with-label.checkbox--polygraphy
-                        input(type="checkbox", name="provision")#checkbox-18.visually-hidden
-                        label(for="checkbox-18") Цветная печать
-                input(type="text", placeholder="Количество копий").input-style.input__polygraphy--copies
+                div.polygraphy__inner-container.close-section
+                    div.input-style Формат
+                        ul 
+                            li 
+                            li 
+                            li 
+                            li 
+                    div.input-style Плотность бумаги
+                        ul 
+                            li 
+                            li 
+                            li 
+                            li
+                        
+                    div.checkbox.checkbox--with-label.checkbox--polygraphy
+                            input(type="checkbox", name="provision")#checkbox-18.visually-hidden
+                            label(for="checkbox-18") Цветная печать
+                    input(type="text", placeholder="Количество копий").input-style.input__polygraphy--copies
+                    form#upload-container(method="POST" action="").polygraphy__upload-container
+                                div 
+                                    input(type="file", name="file", multiple)#file-input
+                                    label(for="file-input") Загрузить файл
+
+                                input(type="file", placeholder="" multiple="multiple")#add-file.input-style
 
         div.container.event-container.event-container--add-event
             a(href="").blue-button-style.event__button--add-event Cоздать мероприятие
 
-
-
-
-
-
-
-                            
-                    
-
-                
-
-    
-                
-                
-
 script(src='./warning.js')
+script(src='./map.js')
+script(src='./checkbox-sections.js')
