@@ -1,0 +1,26 @@
+div.popup.popup--close#popupAddMember
+    div.popup__content.add-member__content
+        button.popup__button--close#add-member__button--close
+
+        h3.h3-style Добавить участника
+        input(type="text", placeholder="ФИО").input-style
+        div.input-style Организация
+        div.checkbox.checkbox--with-label
+                        input(type="checkbox", name="provision")#checkbox-21.visually-hidden
+                        label(for="checkbox-21") Пропуск
+        div.checkbox.checkbox--with-label
+                        input(type="checkbox", name="provision")#checkbox-22.visually-hidden
+                        label(for="checkbox-22") Парковка
+        input(type="text", placeholder="ФИО водителя").input-style
+        div.input-style Марка
+        div.input-style Модель
+        input(type="text", placeholder="Гос  номер АА000АА00 ").input-style
+        div.checkbox.checkbox--with-label
+                        input(type="checkbox", name="provision")#checkbox-23.visually-hidden
+                        label(for="checkbox-23") Табличка с ФИО
+        input(type="text", placeholder="Надпись на табличке ФИО").input-style
+
+
+        div.popup__buttons
+            button.blue-button-style.add-member__button--disagree Отмена
+            button.blue-button-style.add-member__button--agree Добавить

@@ -183,10 +183,9 @@
 
 .checkbox label {
     position: relative;
-    // display: inline-block;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 18px;
-    color: $blackColor;
+    color: $darkGray;
 }
 
 .checkbox label::before {
@@ -220,14 +219,6 @@
 
 /*checkbox-without-label*/
 
-.checkbox label {
-    position: relative;
-    // display: inline-block;
-    font-size: 14px;
-    line-height: 18px;
-    color: $blackColor;
-}
-
 .checkbox-label--without-label {
     display: flex;
     justify-content: center;
@@ -235,6 +226,18 @@
 }
 
 /*memebers*/
+
+
+.distance-members-container {
+    grid-area: 4/1/5/4;
+}
+
+.distance-members__h2 {
+    font-weight: 700;
+    font-size: 24px;
+    color: #13377d;
+    line-height: 70px;
+}
 
 .members__h2 {
     margin-bottom: 20px;
@@ -271,7 +274,7 @@
 }
 
 .button-add-member {
-    grid-row: 3;
+    display: block;
     max-width: 232px;
 }
 

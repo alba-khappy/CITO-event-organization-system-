@@ -1,9 +1,9 @@
-div.warning.warning--close
-    div.warning__content
-        button.warning__button--close-popup
+div.popup.popup--close#warning
+    div.popup__content
+        button.popup__button--close#warning__button--close
         h1.warning__h1 ПРЕДУПРЕЖДЕНИЕ
         p.warning__text Дата и время уже заняты <span>данным</span> мероприятием
         p.warning__text--bold Отменить пересекающееся мероприятие?
-        div.warning__buttons
-            a(href="").blue-button-style.warning__button--argee Да
-            a(href="").blue-button-style.warning__button--disagree Нет
+        div.popup__buttons
+            button.blue-button-style.warning__button--agree Да
+            button.blue-button-style.warning__button--disagree Нет

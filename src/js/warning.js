@@ -1,11 +1,11 @@
 const today = document.querySelector('.calendar__today');
-const popupWarning = document.querySelector('.warning');
-const closePopup = document.querySelector('.warning__button--close-popup');
+const popupWarning = document.querySelector('#warning');
+const closePopupWarning = document.querySelector('#warning__button--close');
 
 today.addEventListener('click', function(){
-    popupWarning.classList.remove("warning--close");
+    popupWarning.classList.remove("popup--close");
 });
 
-closePopup.addEventListener('click', function(){
-    popupWarning.classList.add("warning--close");
+closePopupWarning.addEventListener('click', function(){
+    popupWarning.classList.add("popup--close");
 });

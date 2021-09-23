@@ -134,3 +134,59 @@ $orange: #ff7a00;
       padding-right: 45px;
       margin: 0 auto;
   }
+
+  /*popup*/
+
+  .popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+}
+
+.popup__button--close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: $white;
+    border: 1px solid $lightGrayColor;
+    border-radius: 10px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url('../images/add-file.svg');
+        width: 21px;
+        height: 21px;
+        background-repeat: no-repeat;
+        transform: rotate(45deg) translate(-11px, 4px);
+    }
+
+}
+
+.popup--close {
+    display: none;
+}
+
+.popup__content {
+    position: relative;
+    display: grid;
+    padding: 35px 40px;
+    background-color: $white;
+}
+
+.popup__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    column-gap: 26px;
+    justify-items: center;
+}
