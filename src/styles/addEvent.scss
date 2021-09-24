@@ -166,6 +166,8 @@
     height: 300px;
     align-self: end;
     justify-self: end;
+    background-image: url('../images/map.jpg');
+    background-repeat: no-repeat;
 }
 
 .button-share {
@@ -361,6 +363,7 @@
 }
 
 .polygraphy__inner-container {
+    grid-area: 2/1/3/4;
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 400px);
@@ -409,74 +412,6 @@
         left: 0;
         bottom: 70px;
     }
-}
-
-/*upload*/
-
-#upload-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 42px;
-    border: 0.6px solid #c4c4c4;
-    background-color: #f7f7f7;
-    font-family: "Geometria", serif;
-    color: $darkGray;
-    border-radius: 10px;
-}
-
-.parameters__upload-container {
-    width: 252px;
-}
-
-#upload-container img {
-    display: inline;
-    width: 40%;
-    margin-bottom: 20px;
-}
-
-#upload-container label:hover {
-    cursor: pointer;
-}
-
-#upload-container div {
-    position: relative;
-    z-index: 10;
-}
-
-.polygraphy__upload-container div {
-    transform: translateX(-120px);
-
-    &::after {
-        left: 345px;
-    }
-}
-
-.parameters__upload-container div{
-    transform: translateX(-45px);
-
-    &::after {
-        left: 210px;
-    }
-}
-
-#upload-container div::after {
-    content: "";
-    background-image: url("./images/add-file.svg");
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    top: 4px;
-}
-
-#upload-container input[type="file"] {
-    width: 200px;
-    height: 30px;
-    opacity: 0;
-    position: absolute;
-    z-index: -10;
 }
 
 div.close-section {

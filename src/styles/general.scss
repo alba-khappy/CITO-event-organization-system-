@@ -94,6 +94,12 @@ $orange: #ff7a00;
     color: $blueColor;
 }
 
+.h4-style {
+    font-weight: 700;
+    font-size: 24px;
+    color: $blueColor;
+}
+
 .blue-button-style {
     font-family: "Geometria", serif;
     background-color: $blueColor;
@@ -121,6 +127,12 @@ $orange: #ff7a00;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+  }
+
+  .text-style {
+    font-size: 16px;
+    color: $darkGray;
+    line-height: 20px;
   }
 
   .index-container {
@@ -198,4 +210,72 @@ $orange: #ff7a00;
 
 .popup__select {
     position: relative;
+}
+
+/*upload*/
+
+#upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 42px;
+    border: 0.6px solid #c4c4c4;
+    background-color: #f7f7f7;
+    font-family: "Geometria", serif;
+    color: $darkGray;
+    border-radius: 10px;
+}
+
+.parameters__upload-container {
+    width: 252px;
+}
+
+#upload-container img {
+    display: inline;
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+#upload-container label:hover {
+    cursor: pointer;
+}
+
+#upload-container div {
+    position: relative;
+    z-index: 10;
+}
+
+.polygraphy__upload-container div {
+    transform: translateX(-120px);
+
+    &::after {
+        left: 345px;
+    }
+}
+
+.parameters__upload-container div{
+    transform: translateX(-45px);
+
+    &::after {
+        left: 210px;
+    }
+}
+
+.upload--add-file div::after {
+    content: "";
+    background-image: url("./images/add-file.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 4px;
+}
+
+#upload-container input[type="file"] {
+    width: 200px;
+    height: 30px;
+    opacity: 0;
+    position: absolute;
+    z-index: -10;
 }

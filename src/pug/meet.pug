@@ -4,44 +4,31 @@ html(lang="ru")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title= "Event organization system"
     link(rel='stylesheet', href='./main.css', type='text/css')
-    script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript")
-    
-  body
-      include warning.pug
-      include addMember.pug
-      include addDistanceMember.pug
-      include header.pug
-      include breadcrumbs.pug
-      section
-        div.container.event-container.event-container--options 
-            h1.main-heading.event-heading--margin Создание мероприятия
-                h3.h3-style.event__h3--initiator Инициатор
-                input(type="text", placeholder="ФИО").input-style.event__input--name
-                div.event__input--post.select__component
-                    div.select__main-item.input-style
-                    ul.select__list.select__list--blue-style.select--close
-                        li.select__item Должность
-                        li.select__item Должность
-                        li.select__item Должность
-                h3.h3-style.event__h3--event Мероприятие
-                input(type="text", placeholder="Название").input-style.event__input--event-name
-                input(type="number", placeholder="Кол-во участников", min="0", max="10000").input-style.event__input--quantity
-            div.event--calendar-position
-                include calendar.pug 
-            h3.h3-style.event__h3.event__h3--duration Длительность и время мероприятия
-            input(type="number", placeholder="Длительность / ч").input-style.event__input--duration
-            input(type="tel", placeholder="Время").input-style.event__input--time
 
-        div.container.event-container 
-                h2.h2-style.event__h2 Переговорные
-                a(href="").event__meeting-room--link.event__meeting-room--link-1
-                a(href="").event__meeting-room--link.event__meeting-room--link-1 
-                a(href="").event__meeting-room--link.event__meeting-room--link-2
-
-        div.container.event-container.event-container--provision
+    body
+        include header.pug
+        include breadcrumbs.pug
+        section
+            div.container.meet-container.meet-container--height
+                h1.main-heading Мероприятие №1
+                div.meet__container-info
+                    div.meet__container-info--duration
+                        span.text-style 25 / 08 / 2021  
+                        span.text-style 13:00
+                        p.text-style Длительность: 1 час
+                    div
+                        p.text-style Инициатор
+                        p.meet__initiator-name Иванов И. И. 
+                        p.text-style Менеджер
+                img(src="./images/meeting-room-1.jpg", alt="").meet__room-img
+                div.meet__container-info-room
+                    h4.h4-style Переговорная
+                    p.text-style Переговорная №3
+                    h4.h4-style Количество участников
+                    p.text-style 500 человек
+            div.container.event-container.event-container--provision
                 h2.h2-style.event__h2 Обеспечение
                 .provision__checkbox-container 
-                
                     div.checkbox.checkbox--with-label.provision__checkbox
                         input(type="checkbox", name="provision")#checkbox-1.visually-hidden
                         label(for="checkbox-1") Вода
@@ -52,15 +39,13 @@ html(lang="ru")
                         input(type="checkbox", name="provision")#checkbox-3.visually-hidden
                         label(for="checkbox-3") Пресса
 
-                .provision__button-container 
+                div.provision__button-container 
                     address г. Москва, ул. Тверская,11
-                    a(href="").blue-button-style.button-share Поделиться
-                
+                    a(href="").blue-button-style.button-share Поделиться     
                 div#map
 
-        div.container.event-container 
+            div.container.meet-container 
                 h2.h2-style.event__h2.members__h2 Участники (Очно)
-                
                 div.members__table-container
                     table.members__table
                         thead 
@@ -116,17 +101,22 @@ html(lang="ru")
                                     div.checkbox.checkbox--without-label
                                         input(type="checkbox", name="agreements")#checkbox-12.visually-hidden
                                         label(for="checkbox-12").checkbox-label--without-label
-                        
-                button.blue-button-style.button-add-member#addMember Добавить участника
-        
-        div.container.event-container
+                            tr 
+                                td 
+                                td 
+                                td.members__link-align
+                                    a(href="").link-request Заявка
+                                td.members__link-align
+                                    a(href="").link-request Заявка
+                                td.members__link-align
+                                    a(href="").link-request Заявка
+
+            div.container.meet-container 
                 
                 h2.h2-style.event__h2 ВКС
-                div.checkbox.checkbox--without-label#parameters-checkbox
-                                        input(type="checkbox", name="agreements")#checkbox-19.visually-hidden
-                                        label(for="checkbox-19").checkbox-label--without-label
+                a(href="").meet__parameters-request.link-request  Заявка
             
-                div.parameters__inner-container.close-section
+                div.parameters__inner-container.meet__inner-container
                     h2.h2-style.parameters__h2 Параметры конференции
                     div.parameters__checkbox-container
                         div.checkbox.checkbox--with-label.parameters__checkbox--1
@@ -155,13 +145,13 @@ html(lang="ru")
                                 li 
                         div.parameters__add-file
                             p Презентация:
-                            form#upload-container(method="POST" action="").parameters__upload-container.upload--add-file
+                            form#upload-container(method="POST" action="").parameters__upload-container.file-downloaded
                                 div 
                                     input(type="file", name="file", multiple)#file-input
-                                    label(for="file-input") Прикрепить файл
+                                    label(for="file-input") Файл.pdf
 
                                 input(type="file", placeholder="" multiple="multiple")#add-file.input-style
-
+            
                     div.distance-members-container
                         h2.distance-members__h2 Участники (удаленно)
 
@@ -185,14 +175,13 @@ html(lang="ru")
                                         td Доу Д. П.
                                         td Амбрелла
                                         td dou.dp@mail.ru
-                        button.blue-button-style.button-add-member#addDistanceMember Добавить участника
 
-        div.container.event-container.event-container--polygraphy
+                        a(href="").members__conference-link Ссылка на конференцию (просмотр)
+                        a(href="").members__conference-link Ссылка на конференцию (участие)
+            
+            div.container.meet-container.event-container--polygraphy
                 h2.h2-style.event__h2 Полиграфия / раздаточный материал
-                div.checkbox.checkbox--without-label#polygraphy-checkbox
-                                        input(type="checkbox", name="agreements")#checkbox-20.visually-hidden
-                                        label(for="checkbox-20").checkbox-label--without-label
-                div.polygraphy__inner-container.close-section
+                div.polygraphy__inner-container
                     div.input-style Формат
                         ul 
                             li 
@@ -210,19 +199,12 @@ html(lang="ru")
                             input(type="checkbox", name="provision")#checkbox-18.visually-hidden
                             label(for="checkbox-18") Цветная печать
                     input(type="number", placeholder="Количество копий").input-style.input__polygraphy--copies
-                    form#upload-container(method="POST" action="").polygraphy__upload-container.upload--add-file
-                                div 
-                                    input(type="file", name="file", multiple)#file-input
-                                    label(for="file-input") Загрузить файл
+                    div.meet__added-file
+                        img(src="./images/added-file.svg", alt="file icon")
+                        span Файл.pdf
+                    a(href="").blue-button-style.button-polygraphy-request Заявка на полиграфию
+                    a(href="").blue-button-style.button-save Сохранить
+                    
+            
 
-                                input(type="file", placeholder="" multiple="multiple")#add-file.input-style
-
-        div.container.event-container.event-container--add-event
-            a(href="/meet.html").blue-button-style.event__button--add-event Cоздать мероприятие
-
-script(src='./select.js')
-script(src='./warning.js')
 script(src='./map.js')
-script(src='./checkbox-sections.js')
-script(src='./addMember.js')
-script(src='./addDistanceMember.js')

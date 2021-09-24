@@ -1,0 +1,102 @@
+@import "general.scss";
+
+.meet-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding: 20px 120px;
+}
+
+
+.meet-container--height {
+  grid-template-rows: auto 310px;  
+}
+
+.meet__inner-container {
+    grid-area: 2/1/3/4;
+}
+
+.meet__parameters-request {
+    grid-area: 1/1/2/2;
+    align-self: center;
+    justify-self: right;
+}
+
+.meet__container-info {
+    grid-area: 2/1/3/2;
+    display: grid;
+}
+
+.meet__container-info--duration {
+    align-self: center;
+}
+
+.meet__initiator-name {
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.01em;
+    color: $blueColor;
+}
+
+.meet__container-info-room {
+    grid-area: 2/3/3/4;
+    padding-left: 50px;
+}
+
+.meet__room-img {
+    grid-area: 2/2/3/3;
+    justify-self: end;
+    align-self: end;
+    height: 100%;
+}
+
+.members__link-align {
+    text-align: center;
+}
+
+.link-request {
+    font-size: 16px;
+    text-decoration: underline;
+    color: $blueColor;
+    margin: 0 auto;
+}
+
+.members__conference-link {
+    display: block;
+    font-weight: 400;
+    font-size: 18px;
+    color: $blueColor;
+    text-decoration: underline;
+    line-height: 70px;
+}
+
+.meet__added-file {
+    grid-area: 4/1/5/2;
+    display: flex;
+    align-items: center;
+
+    img {
+        margin-right: 15px;
+    }
+}
+
+.button-polygraphy-request {
+    grid-area: 5/1/6/2;
+    max-width: 250px;
+}
+
+.button-save {
+    grid-area: 6/1/7/4;
+    max-width: 206px;
+
+    &::after {
+        content: "";
+        grid-area: 1/1/2/4;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        border-top: 1px solid #dadada;
+        left: 0;
+    }
+
+}
+
