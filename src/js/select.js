@@ -1,5 +1,5 @@
-const select = document.querySelector('.select__main-item');
-const selectList = document.querySelector('.select__list');
+const select = document.querySelectorAll('.select__main-item');
+const selectList = document.querySelectorAll('.select__list');
 const selectItem = document.querySelectorAll('.select__item');
 
 select.innerHTML = selectItem[1].innerHTML;
