@@ -4,11 +4,16 @@ div.popup.popup--close#popupAddDistanceMember
 
         h3.h3-style Добавить участника
         input(type="text", placeholder="ФИО").input-style
-        div.input-style Организация
+        div.popup__select
+            div.select__main-item.input-style
+            ul.select__list.select__list--blue-style.select--close
+                li.select__item Организация
+                li.select__item Организация
+                li.select__item Организация
         input(type="text", placeholder="Email").input-style
        
-
-
         div.popup__buttons
             button.blue-button-style.add-member__button--disagree Отмена
             button.blue-button-style.add-member__button--agree Добавить
+
+script(src='./select.js')
