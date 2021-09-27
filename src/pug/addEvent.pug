@@ -43,7 +43,7 @@ html(lang="ru")
             a(href="").event__meeting-room--link.event__meeting-room--link-1 
             a(href="").event__meeting-room--link.event__meeting-room--link-2
 
-        div.container.event-container.event-container--provision
+        div.container.event-container--provision
                 h2.h2-style.heading__h2 Обеспечение
                 .provision__checkbox-container 
                 
@@ -63,7 +63,7 @@ html(lang="ru")
                 
                 div#map.map__add-event
 
-        div.container.event-container 
+        div.container.event-container--members
                 h2.h2-style.heading__h2.members__h2 Участники (Очно)
                 
                 div.members__table-container.members__table-container--margin
@@ -122,9 +122,9 @@ html(lang="ru")
                                         input(type="checkbox", name="agreements")#checkbox-12.visually-hidden
                                         label(for="checkbox-12").checkbox-label--without-label
                         
-                button.blue-button-style.button-add-member#addMember Добавить участника
+                a(href="").blue-button-style.button-add-member#addMember Добавить участника
         
-        div.container.event-container
+        div.container.event-container--conference
                 
             h2.h2-style.heading__h2 ВКС
             div.checkbox.checkbox--without-label#parameters-checkbox
@@ -190,9 +190,9 @@ html(lang="ru")
                                     td Доу Д. П.
                                     td Амбрелла
                                     td dou.dp@mail.ru
-                    button.blue-button-style.button-add-member#addDistanceMember Добавить участника
+                    a(href="").blue-button-style.button-add-member#addDistanceMember Добавить участника
 
-        div.container.event-container.event-container--polygraphy
+        div.container.event-container--polygraphy
             h2.h2-style.heading__h2 Полиграфия / раздаточный материал
             div.checkbox.checkbox--without-label#polygraphy-checkbox
                                     input(type="checkbox", name="agreements")#checkbox-20.visually-hidden

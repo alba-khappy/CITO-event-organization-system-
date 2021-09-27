@@ -1,0 +1,100 @@
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title= "Event organization system"
+        link(rel='stylesheet', href='./main.css', type='text/css')
+        script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript")
+
+    body
+        include header.pug
+        include breadcrumbs.pug
+        section
+            div.container.create-conference-container
+                h1.main-heading.create-admission-heading Заявка на ВКС
+                    h3.h3-style.h3--initiator Инициатор
+                    input(type="text", placeholder="ФИО").input-style.input--name
+                    div.input--post.select__component
+                        div.select__main-item.input-style
+                        ul.select__list.select__list--blue-style.select--close
+                            li.select__item Должность 0
+                            li.select__item Должность 1
+                            li.select__item Должность 2
+                    h3.h3-style.h3--event Мероприятие
+                    input(type="text", placeholder="Название").input-style.input--event-name
+                    input(type="number", placeholder="Кол-во участников", min="0", max="10000").input-style.input--quantity
+                div.event--calendar-position
+                    include calendar.pug 
+                h3.h3-style.event__h3.event__h3--duration Длительность и время мероприятия
+                input(type="number", placeholder="Длительность / ч").input-style.event__input--duration
+                div.select__component.event__input--time
+                        div.select__main-item.input-style
+                        ul.select__list.select__list--blue-style.select--close
+                            li.select__item 8:00-9:00
+                            li.select__item 9:00-10:00
+                            li.select__item 10:00-11:00
+
+            div.container.create-conference-container
+                h2.h2-style.heading__h2 Параметры конференции
+                div.parameters__checkbox-container
+                    div.checkbox.checkbox--with-label.parameters__checkbox--1
+                        input(type="checkbox", name="provision")#checkbox-13.visually-hidden
+                        label(for="checkbox-13") Закрытая
+                    div.checkbox.checkbox--with-label.parameters__checkbox--2
+                        input(type="checkbox", name="provision")#checkbox-14.visually-hidden
+                        label(for="checkbox-14") Видео-запись
+                    div.checkbox.checkbox--with-label.parameters__checkbox--3
+                        input(type="checkbox", name="provision")#checkbox-15.visually-hidden
+                        label(for="checkbox-15") Аудио-запись
+                    div.checkbox.checkbox--with-label.parameters__checkbox--4
+                        input(type="checkbox", name="provision")#checkbox-16.visually-hidden
+                        label(for="checkbox-16") Внешняя трансляция
+                    div.checkbox.checkbox--with-label.parameters__checkbox--5
+                        input(type="checkbox", name="provision")#checkbox-17.visually-hidden
+                        label(for="checkbox-17") Открытая
+
+                div.parameters__info-container
+                    input(type="number", placeholder="Количество докладчиков").input-style
+                    div.input-style Удаленно
+                        ul 
+                            li 
+                            li 
+                            li 
+                            li 
+                    div.parameters__add-file
+                        p Презентация:
+                        form#upload-container(method="POST" action="").parameters__upload-container.upload--add-file
+                            div 
+                                input(type="file", name="file", multiple)#file-input
+                                label(for="file-input") Прикрепить файл
+
+                            input(type="file", placeholder="" multiple="multiple")#add-file.input-style
+
+                div.distance-members-container
+                    h2.distance-members__h2 Участники (удаленно)
+
+                    div.members__table-container.members__table-container--margin
+                        table.members__table
+                            thead 
+                                tr 
+                                    td ФИО участника
+                                    td Организация
+                                    td E-mail участника
+                            tbody 
+                                tr
+                                    td Сидоров С. А.
+                                    td ЦИТО
+                                    td sidorov@gmail.ru
+                                tr
+                                    td Иванов И. И.
+                                    td СЮР
+                                    td ivanov@gmail.ru
+                                tr
+                                    td Доу Д. П.
+                                    td Амбрелла
+                                    td dou.dp@mail.ru
+                    a(href="").blue-button-style.button-add-member Добавить участника
+                    a(href="").blue-button-style.button-create-conference Cоздать ВКС
+
+script(src='./select.js')
+script(src='./checkbox-sections.js')
