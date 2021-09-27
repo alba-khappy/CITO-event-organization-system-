@@ -1,3 +1,5 @@
+@import "variables.scss";
+
 * {
     margin: 0;
     padding: 0;
@@ -44,16 +46,6 @@ body {
     margin: 0 auto;
 }
 
-$blueColor: #13377d;
-$blackColor: #000000;
-$darkGray: #58595b;
-$disabledGrayColor: #dadada;
-$lightGrayColor: #a3a3a3;
-$white: #ffffff;
-$red: #e22020;
-$green: #36ce00;
-$orange: #ff7a00;
-
 .main-heading {
     font-weight: bold;
     font-size: 36px;
@@ -98,6 +90,7 @@ $orange: #ff7a00;
     font-weight: 700;
     font-size: 24px;
     color: $blueColor;
+    max-width: 200px;
 }
 
 .blue-button-style {
