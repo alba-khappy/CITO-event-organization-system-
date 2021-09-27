@@ -29,7 +29,8 @@ html(lang="ru")
                         h4.h4-style.meet__info-room--padding Количество участников
                         p.text-style 500 человек
             div.container.event-container.event-container--provision
-                h2.h2-style.event__h2 Обеспечение
+                h2.h2-style.heading__h2 Обеспечение
+                a(href="").meet__parameters-request.link-request  Заявка
                 .provision__checkbox-container 
                     div.checkbox.checkbox--with-label.provision__checkbox
                         input(type="checkbox", name="provision")#checkbox-1.visually-hidden
@@ -47,8 +48,8 @@ html(lang="ru")
                 div#map
 
             div.container.meet-container 
-                h2.h2-style.event__h2.members__h2 Участники (Очно)
-                div.members__table-container
+                h2.h2-style.heading__h2.members__h2 Участники (Очно)
+                div.members__table-container.meet__members__table--margin
                     table.members__table
                         thead 
                             tr 
@@ -107,15 +108,15 @@ html(lang="ru")
                                 td 
                                 td 
                                 td.members__link-align
-                                    a(href="").link-request Заявка
+                                    a(href="").link-request.link-request--align Заявка
                                 td.members__link-align
-                                    a(href="").link-request Заявка
+                                    a(href="").link-request.link-request--align Заявка
                                 td.members__link-align
-                                    a(href="").link-request Заявка
+                                    a(href="").link-request.link-request--align Заявка
 
             div.container.meet-container 
                 
-                h2.h2-style.event__h2 ВКС
+                h2.h2-style.heading__h2 ВКС
                 a(href="").meet__parameters-request.link-request  Заявка
             
                 div.parameters__inner-container.meet__inner-container
@@ -149,7 +150,7 @@ html(lang="ru")
                             p Презентация:
                             form#upload-container(method="POST" action="").parameters__upload-container.file-downloaded
                                 div 
-                                    input(type="file", name="file", multiple)#file-input
+                                    input(type="file", name="file", multiple, disabled="disabled")#file-input
                                     label(for="file-input") Файл.pdf
 
                                 input(type="file", placeholder="" multiple="multiple")#add-file.input-style
@@ -181,20 +182,21 @@ html(lang="ru")
                         a(href="").members__conference-link Ссылка на конференцию (просмотр)
                         a(href="").members__conference-link Ссылка на конференцию (участие)
             
-            div.container.meet-container.event-container--polygraphy
-                h2.h2-style.event__h2 Полиграфия / раздаточный материал
-                div.popup__select.select__component
-                    div.select__main-item.input-style
-                    ul.select__list.select__list--blue-style.select--close
-                        li.select__item Формат 1
-                        li.select__item Формат 2
-                        li.select__item Формат 3
-                div.popup__select.select__component
-                    div.select__main-item.input-style
-                    ul.select__list.select__list--blue-style.select--close
-                        li.select__item Плотность бумаги 1
-                        li.select__item Плотность бумаги 2
-                        li.select__item Плотность бумаги 3
+            div.container.meet-container
+                h2.h2-style.meet__h2--polygraphy Полиграфия / раздаточный материал
+                div.polygraphy__inner-container
+                    div.popup__select.select__component
+                        div.select__main-item.input-style
+                        ul.select__list.select__list--blue-style.select--close
+                            li.select__item Формат 1
+                            li.select__item Формат 2
+                            li.select__item Формат 3
+                    div.popup__select.select__component
+                        div.select__main-item.input-style
+                        ul.select__list.select__list--blue-style.select--close
+                            li.select__item Плотность бумаги 1
+                            li.select__item Плотность бумаги 2
+                            li.select__item Плотность бумаги 3
                         
                     div.checkbox.checkbox--with-label.checkbox--polygraphy
                             input(type="checkbox", name="provision")#checkbox-18.visually-hidden
@@ -203,9 +205,12 @@ html(lang="ru")
                     div.meet__added-file
                         img(src="./images/added-file.svg", alt="file icon")
                         span Файл.pdf
+                    
                     a(href="").blue-button-style.button-polygraphy-request Заявка на полиграфию
-                    a(href="").blue-button-style.button-save Сохранить
+                    div.meet__button-save-wrapper
+                        a(href="").blue-button-style.button-save Сохранить
+
                     
             
-
+script(src='./select.js')
 script(src='./map.js')

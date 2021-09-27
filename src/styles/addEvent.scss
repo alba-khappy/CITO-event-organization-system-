@@ -69,7 +69,7 @@
     background-color: #F7F9FE;
 }
 
-.event__h2 {
+.heading__h2 {
     grid-area: 1/1/2/4;
     position: relative;
     line-height: 70px;
@@ -254,6 +254,9 @@
     grid-column: 1/-1;
     border: 0.6px solid #c4c4c4;
     border-radius: 10px;
+}
+
+.members__table-container--margin {
     margin-bottom: 30px;
 }
 

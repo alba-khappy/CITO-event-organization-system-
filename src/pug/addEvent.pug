@@ -33,13 +33,13 @@ html(lang="ru")
             input(type="tel", placeholder="Время").input-style.event__input--time
 
         div.container.event-container 
-            h2.h2-style.event__h2 Переговорные
+            h2.h2-style.heading__h2 Переговорные
             a(href="").event__meeting-room--link.event__meeting-room--link-1
             a(href="").event__meeting-room--link.event__meeting-room--link-1 
             a(href="").event__meeting-room--link.event__meeting-room--link-2
 
         div.container.event-container.event-container--provision
-                h2.h2-style.event__h2 Обеспечение
+                h2.h2-style.heading__h2 Обеспечение
                 .provision__checkbox-container 
                 
                     div.checkbox.checkbox--with-label.provision__checkbox
@@ -59,9 +59,9 @@ html(lang="ru")
                 div#map
 
         div.container.event-container 
-                h2.h2-style.event__h2.members__h2 Участники (Очно)
+                h2.h2-style.heading__h2.members__h2 Участники (Очно)
                 
-                div.members__table-container
+                div.members__table-container.members__table-container--margin
                     table.members__table
                         thead 
                             tr 
@@ -121,7 +121,7 @@ html(lang="ru")
         
         div.container.event-container
                 
-            h2.h2-style.event__h2 ВКС
+            h2.h2-style.heading__h2 ВКС
             div.checkbox.checkbox--without-label#parameters-checkbox
                 input(type="checkbox", name="agreements")#checkbox-19.visually-hidden
                 label(for="checkbox-19").checkbox-label--without-label
@@ -165,7 +165,7 @@ html(lang="ru")
                 div.distance-members-container
                     h2.distance-members__h2 Участники (удаленно)
 
-                    div.members__table-container
+                    div.members__table-container.members__table-container--margin
                         table.members__table
                             thead 
                                 tr 
@@ -188,7 +188,7 @@ html(lang="ru")
                     button.blue-button-style.button-add-member#addDistanceMember Добавить участника
 
         div.container.event-container.event-container--polygraphy
-            h2.h2-style.event__h2 Полиграфия / раздаточный материал
+            h2.h2-style.heading__h2 Полиграфия / раздаточный материал
             div.checkbox.checkbox--without-label#polygraphy-checkbox
                                     input(type="checkbox", name="agreements")#checkbox-20.visually-hidden
                                     label(for="checkbox-20").checkbox-label--without-label
