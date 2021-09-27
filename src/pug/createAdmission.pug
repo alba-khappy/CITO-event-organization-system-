@@ -1,0 +1,107 @@
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title= "Event organization system"
+        link(rel='stylesheet', href='./main.css', type='text/css')
+        script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript")
+
+    body
+        include header.pug
+        include breadcrumbs.pug
+        section
+            div.container.create-admission-container
+                h1.main-heading.create-admission-heading Заявка в пропускное бюро
+                    h3.h3-style.h3--initiator Инициатор
+                    input(type="text", placeholder="ФИО").input-style.input--name
+                    div.input--post.select__component
+                        div.select__main-item.input-style
+                        ul.select__list.select__list--blue-style.select--close
+                            li.select__item Должность 0
+                            li.select__item Должность 1
+                            li.select__item Должность 2
+                    h3.h3-style.h3--event Мероприятие
+                    input(type="text", placeholder="Название").input-style.input--event-name
+                    input(type="number", placeholder="Кол-во участников", min="0", max="10000").input-style.input--quantity
+                div.event--calendar-position
+                    include calendar.pug 
+                h3.h3-style.event__h3.event__h3--duration Длительность и время мероприятия
+                input(type="number", placeholder="Длительность / ч").input-style.event__input--duration
+                div.select__component.event__input--time
+                        div.select__main-item.input-style
+                        ul.select__list.select__list--blue-style.select--close
+                            li.select__item 8:00-9:00
+                            li.select__item 9:00-10:00
+                            li.select__item 10:00-11:00
+
+            div.container.create-admission-container
+                div#map.map__create-admission
+                div.address-button-container.create-admission-address
+                    address г. Москва, ул. Тверская,11
+                    a(href="").blue-button-style.button-share Поделиться
+
+            div.container.create-admission-container
+                h2.h2-style.heading__h2.members__h2 Участники (Очно)
+                div.members__table-container.meet__members__table--margin
+                    table.members__table
+                        thead 
+                            tr 
+                                td ФИО участника
+                                td Организация
+                                td Пропуск
+                                td Парковка
+                                td Таблица с ФИО
+                        tbody 
+                            tr
+                                td Сидоров С. А.
+                                td ЦИТО
+                                td 
+                                    div.checkbox.checkbox--without-label
+                                        input(type="checkbox", name="agreements")#checkbox-4.visually-hidden
+                                        label(for="checkbox-4").checkbox-label--without-label
+                                td 
+                                    div.checkbox.checkbox--without-label
+                                        input(type="checkbox", name="agreements")#checkbox-5.visually-hidden
+                                        label(for="checkbox-5").checkbox-label--without-label
+                                td 
+                                    div.checkbox.checkbox--without-label
+                                        input(type="checkbox", name="agreements")#checkbox-6.visually-hidden
+                                        label(for="checkbox-6").checkbox-label--without-label
+                            tr
+                                td Иванов И. И.
+                                td СЮР
+                                td 
+                                    div.checkbox.checkbox--without-label
+                                        input(type="checkbox", name="agreements")#checkbox-7.visually-hidden
+                                        label(for="checkbox-7").checkbox-label--without-label
+                                td 
+                                    div.checkbox.checkbox--without-label
+                                        input(type="checkbox", name="agreements")#checkbox-8.visually-hidden
+                                        label(for="checkbox-8").checkbox-label--without-label
+                                td 
+                                    div.checkbox.checkbox--without-label
+                                        input(type="checkbox", name="agreements")#checkbox-9.visually-hidden
+                                        label(for="checkbox-9").checkbox-label--without-label
+                            tr
+                                td Доу Д. П.
+                                td Амбрелла
+                                td 
+                                    div.checkbox.checkbox--without-label
+                                        input(type="checkbox", name="agreements")#checkbox-10.visually-hidden
+                                        label(for="checkbox-10").checkbox-label--without-label
+                                td 
+                                    div.checkbox.checkbox--without-label
+                                        input(type="checkbox", name="agreements")#checkbox-11.visually-hidden
+                                        label(for="checkbox-11").checkbox-label--without-label
+                                td 
+                                    div.checkbox.checkbox--without-label
+                                        input(type="checkbox", name="agreements")#checkbox-12.visually-hidden
+                                        label(for="checkbox-12").checkbox-label--without-label
+                a(href="").blue-button-style.button-add-member.create-admission__button--margin Добавить участника
+                a(href="").blue-button-style.button-create-event Создать мероприятие
+
+                                    
+
+script(src='./select.js')
+script(src='./map.js')
+script(src='./checkbox-sections.js')

@@ -14,23 +14,28 @@ html(lang="ru")
       include breadcrumbs.pug
       section
         div.container.event-container.event-container--options 
-            h1.main-heading.event-heading--margin Создание мероприятия
-                h3.h3-style.event__h3--initiator Инициатор
-                input(type="text", placeholder="ФИО").input-style.event__input--name
-                div.event__input--post.select__component
+            h1.main-heading.event-heading Создание мероприятия
+                h3.h3-style.h3--initiator Инициатор
+                input(type="text", placeholder="ФИО").input-style.input--name
+                div.input--post.select__component
                     div.select__main-item.input-style
                     ul.select__list.select__list--blue-style.select--close
                         li.select__item Должность 0
                         li.select__item Должность 1
                         li.select__item Должность 2
-                h3.h3-style.event__h3--event Мероприятие
-                input(type="text", placeholder="Название").input-style.event__input--event-name
-                input(type="number", placeholder="Кол-во участников", min="0", max="10000").input-style.event__input--quantity
+                h3.h3-style.h3--event Мероприятие
+                input(type="text", placeholder="Название").input-style.input--event-name
+                input(type="number", placeholder="Кол-во участников", min="0", max="10000").input-style.input--quantity
             div.event--calendar-position
                 include calendar.pug 
             h3.h3-style.event__h3.event__h3--duration Длительность и время мероприятия
             input(type="number", placeholder="Длительность / ч").input-style.event__input--duration
-            input(type="tel", placeholder="Время").input-style.event__input--time
+            div.select__component.event__input--time
+                    div.select__main-item.input-style
+                    ul.select__list.select__list--blue-style.select--close
+                        li.select__item 8:00-9:00
+                        li.select__item 9:00-10:00
+                        li.select__item 10:00-11:00
 
         div.container.event-container 
             h2.h2-style.heading__h2 Переговорные
@@ -52,11 +57,11 @@ html(lang="ru")
                         input(type="checkbox", name="provision")#checkbox-3.visually-hidden
                         label(for="checkbox-3") Пресса
 
-                .provision__button-container 
+                .address-button-container.add-event-address
                     address г. Москва, ул. Тверская,11
                     a(href="").blue-button-style.button-share Поделиться
                 
-                div#map
+                div#map.map__add-event
 
         div.container.event-container 
                 h2.h2-style.heading__h2.members__h2 Участники (Очно)

@@ -4,6 +4,7 @@ html(lang="ru")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     title= "Event organization system"
     link(rel='stylesheet', href='./main.css', type='text/css')
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript")
 
     body
         include header.pug
@@ -42,10 +43,10 @@ html(lang="ru")
                         input(type="checkbox", name="provision")#checkbox-3.visually-hidden
                         label(for="checkbox-3") Пресса
 
-                div.provision__button-container 
+                div.address-button-container.meet-address
                     address г. Москва, ул. Тверская,11
                     a(href="").blue-button-style.button-share Поделиться     
-                div#map
+                div#map.map__meet
 
             div.container.meet-container 
                 h2.h2-style.heading__h2.members__h2 Участники (Очно)

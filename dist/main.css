@@ -14,7 +14,8 @@
   column-gap: 20px;
 }
 
-.event-heading--margin {
+.event-heading {
+  grid-area: 1/1/2/3;
   margin-bottom: 20px;
 }
 
@@ -22,15 +23,15 @@
   grid-area: 2/1/3/2;
 }
 
-.event__h3--event {
+.h3--event {
   grid-area: 5/1/6/2;
 }
 
-.event__input--event-name {
+.input--event-name {
   grid-area: 6/1/7/2;
 }
 
-.event__input--quantity {
+.input--quantity {
   grid-area: 7/1/8/2;
 }
 
@@ -43,6 +44,7 @@
 }
 
 .event__input--time {
+  position: relative;
   grid-area: 4/3/5/4;
 }
 
@@ -54,15 +56,15 @@
   grid-area: 2/3/3/4;
 }
 
-.event__h3--initiator {
+.h3--initiator {
   grid-area: 2/1/3/2;
 }
 
-.event__input--name {
+.input--name {
   grid-area: 3/1/4/2;
 }
 
-.event__input--post {
+.input--post {
   grid-area: 4/1/5/2;
   position: relative;
 }
@@ -149,24 +151,30 @@
   padding-top: 25px;
 }
 
-.provision__button-container {
-  grid-area: 3/1/4/2;
+.address-button-container {
   display: grid;
   grid-template-rows: repeat(2, auto);
 }
-.provision__button-container address {
+.address-button-container address {
   margin-bottom: 20px;
   font-style: normal;
 }
 
+.add-event-address {
+  grid-area: 3/1/4/2;
+}
+
 #map {
-  grid-area: 2/2/4/4;
   width: 785px;
   height: 300px;
-  align-self: end;
-  justify-self: end;
   background-image: url("../images/map.jpg");
   background-repeat: no-repeat;
+}
+
+.map__add-event {
+  grid-area: 2/2/4/4;
+  align-self: end;
+  justify-self: end;
 }
 
 .button-share {
@@ -580,6 +588,38 @@ div.close-section {
 .calendar__day-off {
   color: #a3a3a3;
 }
+.create-admission-heading {
+  grid-area: 1/1/2/3;
+  margin-bottom: 20px;
+}
+
+.create-admission-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  padding: 20px 120px;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+}
+
+.map__create-admission {
+  grid-area: 1/1/2/3;
+}
+
+.create-admission-address {
+  grid-area: 1/3/2/4;
+  align-self: start;
+}
+
+.create-admission__button--margin {
+  margin-bottom: 90px;
+}
+
+.button-create-event {
+  grid-area: 4/1/5/2;
+  max-width: 274px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -972,6 +1012,16 @@ body {
 
 .meet__info-room--padding {
   padding-bottom: 30px;
+}
+
+.map__meet {
+  grid-area: 2/2/4/4;
+  align-self: end;
+  justify-self: end;
+}
+
+.meet-address {
+  grid-area: 3/1/4/2;
 }
 
 .meet__room-img {
@@ -1385,6 +1435,7 @@ ul.tabs-list--active {
 .tasks-heading--margin {
   margin-bottom: 30px;
 }
+
 
 .warning__h1 {
   justify-self: center;
