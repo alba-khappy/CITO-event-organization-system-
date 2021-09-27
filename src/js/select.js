@@ -18,18 +18,4 @@ for (let i=0; i<selectComponents.length; i++) {
         });
     }
 }
-//
-// select.innerHTML = selectItem[1].innerHTML;
-//
-// for (let i = 0; i < 3; i++) {
-//     selectItem[i].addEventListener('click', function(){
-//         select.innerHTML = selectItem[i].innerHTML;
-//     });
-// }
-//
-// select.addEventListener('click', function(){
-//     selectList.classList.toggle('select--close')
-// });
-// }
-
 

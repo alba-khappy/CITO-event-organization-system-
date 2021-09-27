@@ -183,19 +183,18 @@ html(lang="ru")
             
             div.container.meet-container.event-container--polygraphy
                 h2.h2-style.event__h2 Полиграфия / раздаточный материал
-                div.polygraphy__inner-container
-                    div.input-style Формат
-                        ul 
-                            li 
-                            li 
-                            li 
-                            li 
-                    div.input-style Плотность бумаги
-                        ul 
-                            li 
-                            li 
-                            li 
-                            li
+                div.popup__select.select__component
+                    div.select__main-item.input-style
+                    ul.select__list.select__list--blue-style.select--close
+                        li.select__item Формат 1
+                        li.select__item Формат 2
+                        li.select__item Формат 3
+                div.popup__select.select__component
+                    div.select__main-item.input-style
+                    ul.select__list.select__list--blue-style.select--close
+                        li.select__item Плотность бумаги 1
+                        li.select__item Плотность бумаги 2
+                        li.select__item Плотность бумаги 3
                         
                     div.checkbox.checkbox--with-label.checkbox--polygraphy
                             input(type="checkbox", name="provision")#checkbox-18.visually-hidden
