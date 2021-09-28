@@ -1,0 +1,61 @@
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title= "Event organization system"
+        link(rel='stylesheet', href='./main.css', type='text/css')
+        script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript")
+
+    body
+        include header.pug
+        include breadcrumbs.pug
+        section
+            div.container.create-polygraphy-container
+                h1.main-heading.create-polygraphy-heading Полиграфия
+                    h3.h3-style Инициатор
+                    input(type="text", placeholder="ФИО").input-style.input--name
+                    div.input--post.select__component
+                        div.select__main-item.input-style
+                        ul.select__list.select__list--blue-style.select--close
+                            li.select__item Должность 0
+                            li.select__item Должность 1
+                            li.select__item Должность 2
+                h3.h3-style.event__h3.polygraphy__h3--execution Срок исполнения
+                div.select__component.polygraphy__input--time
+                        div.select__main-item.input-style
+                        ul.select__list.select__list--blue-style.select--close
+                            li.select__item 8:00-9:00
+                            li.select__item 9:00-10:00
+                            li.select__item 10:00-11:00
+                div.event--calendar-position
+                    include calendar.pug
+
+            div.container.event-container--polygraphy
+                h2.h2-style.heading__h2 Полиграфия / раздаточный материал
+                div.polygraphy__inner-container
+                    div.popup__select.select__component
+                        div.select__main-item.input-style
+                        ul.select__list.select__list--blue-style.select--close
+                            li.select__item Формат 1
+                            li.select__item Формат 2
+                            li.select__item Формат 3
+                    div.popup__select.select__component
+                        div.select__main-item.input-style
+                        ul.select__list.select__list--blue-style.select--close
+                            li.select__item Плотность бумаги 1
+                            li.select__item Плотность бумаги 2
+                            li.select__item Плотность бумаги 3
+                        
+                    div.checkbox.checkbox--with-label.checkbox--polygraphy
+                            input(type="checkbox", name="provision")#checkbox-18.visually-hidden
+                            label(for="checkbox-18") Цветная печать
+                    input(type="number", placeholder="Количество копий").input-style.input__polygraphy--copies
+                    form#upload-container(method="POST" action="").polygraphy__upload-container.upload--add-file
+                                div 
+                                    input(type="file", name="file", multiple)#file-input
+                                    label(for="file-input") Загрузить файл
+                                input(type="file", placeholder="" multiple="multiple")#add-file.input-style
+    
+                    a(href="/meet.html").blue-button-style.polygraphy__button--add-event Cоздать мероприятие
+
+script(src='./select.js')

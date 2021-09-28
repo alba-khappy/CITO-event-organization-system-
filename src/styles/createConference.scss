@@ -6,7 +6,16 @@
     row-gap: 30px;
 }
 
+.create-conference-container--parameters {
+    grid-template-columns: repeat(2, auto);
+}
+
+
 .button-create-conference {
-    // grid-area: 4/1/5/2;
-    max-width: 274px;
+    width: 274px;
+    display: block;
+}
+
+.button-add-member--margin {
+    margin-bottom: 90px;
 }
