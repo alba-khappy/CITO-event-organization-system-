@@ -1,0 +1,113 @@
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title= "Event organization system"
+        link(rel='stylesheet', href='./main.css', type='text/css')
+        script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript")
+
+    body
+        include header.pug
+        include breadcrumbs.pug
+        section
+            div.container.request__heading-container 
+                h1.main-heading.request-heading Заявка на организацию ВКС
+                div.popup__select.select__component
+                    div.input-style.request-conference__select.request-conference__select--margin Открыта
+                    ul.select__list.select__list--blue-style.select--close
+                        li.select__item Открыта
+                        li.select__item Закрыта
+            div.container.meet-container.meet-container--main-info
+                div.meet__container-info
+                    div.meet__container-info--duration
+                        h4.h4-style--request Название мероприятия
+                        span.text-style 25 / 08 / 2021  
+                        span.text-style 13:00
+                        p.text-style.text-style--lasting Длительность: 1 час
+                    div
+                        p.text-style Инициатор
+                        p.meet__initiator-name Иванов И. И. 
+                        p.text-style Менеджер
+                img(src="./images/meeting-room-1.jpg", alt="").meet__room-img
+                div.meet__container-info-room
+                    div
+                        h4.h4-style.meet__info-room--padding Переговорная
+                        p.text-style Переговорная №3
+                    div
+                        h4.h4-style.meet__info-room--padding Количество участников
+                        p.text-style 500 человек
+
+            div.container.meet-container 
+                
+                h2.h2-style.heading__h2.meet__h2--conference ВКС
+            
+                div.parameters__inner-container.meet__inner-container
+                    h2.h2-style.parameters__h2 Параметры конференции
+                    div.parameters__checkbox-container
+                        div.checkbox.checkbox--with-label.parameters__checkbox--1
+                            input(type="checkbox", name="provision")#checkbox-13.visually-hidden
+                            label(for="checkbox-13") Закрытая
+                        div.checkbox.checkbox--with-label.parameters__checkbox--2
+                            input(type="checkbox", name="provision")#checkbox-14.visually-hidden
+                            label(for="checkbox-14") Видео-запись
+                        div.checkbox.checkbox--with-label.parameters__checkbox--3
+                            input(type="checkbox", name="provision")#checkbox-15.visually-hidden
+                            label(for="checkbox-15") Аудио-запись
+                        div.checkbox.checkbox--with-label.parameters__checkbox--4
+                            input(type="checkbox", name="provision")#checkbox-16.visually-hidden
+                            label(for="checkbox-16") Внешняя трансляция
+                        div.checkbox.checkbox--with-label.parameters__checkbox--5
+                            input(type="checkbox", name="provision")#checkbox-17.visually-hidden
+                            label(for="checkbox-17") Открытая
+
+                    div.parameters__info-container
+                        input(type="number", placeholder="Количество докладчиков").input-style
+                        div.input-style Удаленно
+                            ul 
+                                li 
+                                li 
+                                li 
+                                li 
+                        div.parameters__add-file
+                            p Презентация:
+                            form#upload-container(method="POST" action="").parameters__upload-container.file-downloaded
+                                div 
+                                    input(type="file", name="file", multiple, disabled="disabled")#file-input
+                                    label(for="file-input") Файл.pdf
+
+                                input(type="file", placeholder="" multiple="multiple")#add-file.input-style
+            
+                    div.distance-members-container
+                        h2.distance-members__h2 Участники (удаленно)
+
+                        div.members__table-container.request-conference__table--margin
+                            table.members__table
+                                thead 
+                                    tr 
+                                        td ФИО участника
+                                        td Организация
+                                        td E-mail участника
+                                tbody 
+                                    tr
+                                        td Сидоров С. А.
+                                        td ЦИТО
+                                        td sidorov@gmail.ru
+                                    tr
+                                        td Иванов И. И.
+                                        td СЮР
+                                        td ivanov@gmail.ru
+                                    tr
+                                        td Доу Д. П.
+                                        td Амбрелла
+                                        td dou.dp@mail.ru
+
+                        form(action="").request-conference__links-wrapper
+                            a(href="").members__conference-link.conference-link--viewing Ссылка на конференцию (просмотр)
+                            a(href="").members__conference-link.conference-link--participation Ссылка на конференцию (участие)
+                            textarea(placeholder="Комментарий").request-conference__link-textarea.input-style
+                            textarea(placeholder="Комментарий").request-conference__link-textarea.input-style
+                            textarea(placeholder="Комментарий").main-textarea-style.request-conference__main-textarea
+                            button(type="submit").blue-button-style.button__submit Отправить
+                        
+
+script(src='./select.js')

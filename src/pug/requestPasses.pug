@@ -1,0 +1,89 @@
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title= "Event organization system"
+        link(rel='stylesheet', href='./main.css', type='text/css')
+        script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript")
+
+    body
+        include header.pug
+        include breadcrumbs.pug
+        section
+            div.container.request__heading-container 
+                h1.main-heading.request-heading Пропуска и парковка
+                div.popup__select.select__component
+                    div.input-style.request-conference__select.request-conference__select--margin Открыта
+                    ul.select__list.select__list--blue-style.select--close
+                        li.select__item Открыта
+                        li.select__item Закрыта
+            div.container.meet-container.meet-container--main-info
+                div.meet__container-info
+                    div.meet__container-info--duration
+                        h4.h4-style--request Название мероприятия
+                        span.text-style 25 / 08 / 2021  
+                        span.text-style 13:00
+                        p.text-style.text-style--lasting Длительность: 1 час
+                    div
+                        p.text-style Инициатор
+                        p.meet__initiator-name Иванов И. И. 
+                        p.text-style Менеджер
+                img(src="./images/meeting-room-1.jpg", alt="").meet__room-img
+                div.meet__container-info-room
+                    div
+                        h4.h4-style.meet__info-room--padding Переговорная
+                        p.text-style Переговорная №3
+                    div
+                        h4.h4-style.meet__info-room--padding Количество участников
+                        p.text-style 500 человек
+
+            div.container.request-passes__table-container
+                h2.h2-style.heading__h2 Пропуска
+
+                div.members__table-container
+                            table.members__table
+                                thead 
+                                    tr 
+                                        td ФИО участника
+                                        td Организация
+                                tbody 
+                                    tr
+                                        td Сидоров С. А.
+                                        td ЦИТО
+                                    tr
+                                        td Иванов И. И.
+                                        td СЮР
+                                    tr
+                                        td Доу Д. П.
+                                        td Амбрелла
+
+            div.container.request-passes__table-container
+                h2.h2-style.heading__h2 Парковка
+
+                div.members__table-container.request-conference__table--margin
+                            table.members__table
+                                thead 
+                                    tr 
+                                        td ФИО участника
+                                        td Марка
+                                        td Модель
+                                        td Гос.номер
+                                tbody 
+                                    tr
+                                        td Сидоров С. А.
+                                        td ЦИТО
+                                        td 
+                                        td АА000АА00
+                                    tr
+                                        td Иванов И. И.
+                                        td СЮР
+                                        td 
+                                        td АА000АА00
+                                    tr
+                                        td Доу Д. П.
+                                        td Амбрелла
+                                        td 
+                                        td АА000АА00
+                form(action="").request__form--width
+                    textarea(placeholder="Комментарий").main-textarea-style
+                    button(type="submit").blue-button-style.button__submit Отправить

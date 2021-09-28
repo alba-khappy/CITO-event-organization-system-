@@ -1,0 +1,49 @@
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title= "Event organization system"
+        link(rel='stylesheet', href='./main.css', type='text/css')
+        script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript")
+
+    body
+        include header.pug
+        include breadcrumbs.pug
+        section
+            div.container.request__heading-container--polygraphy
+                h1.main-heading.request-heading Полиграфия
+                div.popup__select.select__component
+                    div.input-style.request-conference__select.request-conference__select--margin Открыта
+                    ul.select__list.select__list--blue-style.select--close
+                        li.select__item Открыта
+                        li.select__item Закрыта
+            div.container.meet-container.meet-container--main-info
+                div.meet__container-info
+                    div.meet__container-info--duration
+                        p.request-polygraphy__date Срок
+                        span.text-style 25 / 08 / 2021  
+                        span.text-style 13:00
+                    div
+                        p.text-style Инициатор
+                        p.meet__initiator-name Иванов И. И. 
+                        p.text-style Менеджер
+                    div 
+                        h4 Детали
+                        div 
+                            span Формат
+                            span A4
+                        div 
+                            span Плотность бумаги: 
+                            span 80гр/мм2
+                        div 
+                            span Количество копий
+                            span 4
+                    div.checkbox.checkbox--with-label
+                        input(type="checkbox", name="provision")#checkbox-33.visually-hidden
+                        label(for="checkbox-33") Цветная печать
+                    div.meet__added-file
+                        img(src="./images/added-file.svg", alt="file icon")
+                        span Файл.pdf
+                    form(action="").request__form--width
+                        textarea(placeholder="Комментарий").main-textarea-style
+                        button(type="submit").blue-button-style.button__submit Отправить
