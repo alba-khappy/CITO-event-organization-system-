@@ -1,12 +1,12 @@
 @import "variables.scss";
 
 .meet-container {
-    display: grid;
     padding: 20px 120px;
-    gap: 10px 15px;
 }
 
-.meet-container--height {
+.meet-container--main-info {
+    display: grid;
+    gap: 10px 15px;
     grid-template-rows: auto 310px;
 }
 
@@ -82,7 +82,6 @@
 .link-request--align {
     margin: 0 auto;
 }
-
 
 .members__conference-link {
     display: block;

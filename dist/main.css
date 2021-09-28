@@ -993,12 +993,12 @@ body {
   color: #13377d;
 }
 .meet-container {
-  display: grid;
   padding: 20px 120px;
-  gap: 10px 15px;
 }
 
-.meet-container--height {
+.meet-container--main-info {
+  display: grid;
+  gap: 10px 15px;
   grid-template-rows: auto 310px;
 }
 
