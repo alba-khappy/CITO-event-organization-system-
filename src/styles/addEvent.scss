@@ -246,8 +246,6 @@
 /*memebers*/
 
 .event-container--members {
-    position: relative;
-    display: grid;
     padding: 20px 120px;
 }
 
@@ -267,7 +265,6 @@
 }
 
 .members__table-container {
-    grid-column: 1/2;
     border: 0.6px solid #c4c4c4;
     border-radius: 10px;
 }
@@ -386,7 +383,6 @@
 .event-container--polygraphy {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(2, auto);
     padding: 20px 120px;
     gap: 10px 15px;
 }
@@ -409,7 +405,7 @@
 }
 
 #polygraphy-checkbox {
-    grid-area: 1/1/2/3;
+    grid-area: 1/1/2/2;
     align-self: center;
     justify-self: left;
     padding-left: 490px;
@@ -423,6 +419,9 @@
 /*button-add-event*/
 
 .event-container--add-event {
+    position: relative;
+    display: grid;
+    padding: 20px 120px;
     padding-top: 50px;
 }
 
@@ -433,7 +432,7 @@
 
     &::after {
         content: "";
-        grid-area: 1/1/2/4;
+        grid-area: 1/1/2/2;
         position: absolute;
         width: 100%;
         height: 1px;

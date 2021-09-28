@@ -6,17 +6,20 @@
 .create-admission-container {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(3, auto);
     padding: 20px 120px;
     column-gap: 20px;
 }
 
+.create-admission-container--members {
+    padding: 20px 120px;
+}
+
 .map__create-admission {
-    grid-area: 1/1/2/3;
+    grid-area: 1/1/2/2;
 }
 
 .create-admission-address {
-    grid-area: 1/3/2/4;
+    grid-area: 1/2/2/3;
     align-self: start;
 }
 
@@ -25,6 +28,6 @@
 }
 
 .button-create-event {
-    grid-area: 4/1/5/2;
-    max-width: 274px;
+    width: 274px;
+    display: block;
 }

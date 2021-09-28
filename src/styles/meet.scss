@@ -18,7 +18,7 @@
     grid-area: 1/1/2/2;
     align-self: center;
     justify-self: left;
-    padding-left: 150px;
+    padding-left: 190px;
 }
 
 .meet__container-info {
@@ -93,10 +93,6 @@
     line-height: 70px;
 }
 
-.meet__members__table--margin {
-    margin-bottom: 45px;
-}
-
 .meet__added-file {
     grid-area: 4/1/5/2;
     display: flex;
@@ -108,8 +104,11 @@
     }
 }
 
+.meet__h2--conference {
+    line-height: 90px;
+}
+
 .meet__h2--polygraphy {
-    grid-area: 1/1/2/2;
     line-height: 110px;
     position: relative;
 }
@@ -125,7 +124,7 @@
 }
 
 .meet__button-save-wrapper {
-    grid-area: 6/1/7/3;
+    grid-area: 3/1/4/2;
     position: relative;
 
     &::after {
