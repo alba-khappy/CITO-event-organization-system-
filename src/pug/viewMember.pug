@@ -1,12 +1,45 @@
-html(lang="ru")
-    head
-        meta(charset="utf-8")
-        meta(name="viewport" content="width=device-width, initial-scale=1")
-        title= "Event organization system"
-        link(rel='stylesheet', href='./main.css', type='text/css')
-        script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript")
+div.popup.popup--close#popupViewMember
+    div.popup__content.add-member__content
+        button.popup__button--close#view-member__button--close
 
-    body
-        include header.pug
-        include breadcrumbs.pug
-    
+        h3.h3-style Добавить участника
+        input(type="text", placeholder="ФИО").input-style
+        div.popup__select.select__component
+            div.select__main-item.input-style
+            ul.select__list.select__list--blue-style.select--close
+                li.select__item Организация 1
+                li.select__item Организация 2
+                li.select__item Организация 3
+        div.viewMember__checkboxes-wrapper
+            div.checkbox.checkbox--with-label.view-member--checkbox-margin
+                input(type="checkbox", name="provision")#checkbox-21.visually-hidden
+                label(for="checkbox-21") Пропуск
+            a(href="").link-request Заявка 
+            div.checkbox.checkbox--with-label.view-member--checkbox-margin
+                input(type="checkbox", name="provision")#checkbox-22.visually-hidden
+                label(for="checkbox-22") Парковка
+            a(href="").link-request Заявка 
+        input(type="text", placeholder="ФИО водителя").input-style
+        div.popup__select.select__component
+            div.select__main-item.input-style
+            ul.select__list.select__list--blue-style.select--close
+                li.select__item Марка 1
+                li.select__item Марка 2
+                li.select__item Марка 3
+        div.popup__select.select__component
+            div.select__main-item.input-style
+            ul.select__list.select__list--blue-style.select--close
+                li.select__item Модель 1
+                li.select__item Модель 2
+                li.select__item Модель 3
+        input(type="text", placeholder="Гос  номер АА000АА00 ").input-style
+        div.view-member__checkbox-wrapper
+            div.checkbox.checkbox--with-label.view-member--checkbox-margin
+                input(type="checkbox", name="provision")#checkbox-23.visually-hidden
+                label(for="checkbox-23") Табличка с ФИО
+            a(href="").link-request Заявка 
+        input(type="text", placeholder="Надпись на табличке ФИО").input-style
+
+        div.popup__buttons
+            button.blue-button-style.add-member__button--disagree Отмена
+            button.blue-button-style.add-member__button--agree Добавить

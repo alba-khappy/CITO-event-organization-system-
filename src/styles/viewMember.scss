@@ -1,0 +1,13 @@
+.view-member__checkbox-wrapper {
+    display: flex;
+}
+
+.viewMember__checkboxes-wrapper {
+    display: grid;
+    grid-template-columns: 220px 100px;
+    row-gap: 10px;
+}
+
+.view-member--checkbox-margin {
+    margin-right: 50px;
+}
