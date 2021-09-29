@@ -1,3 +1,5 @@
+@import "variables.scss";
+
 .request__heading-container--polygraphy {
     position: relative;
     padding: 20px 120px 0;
@@ -6,4 +8,37 @@
 
 .request-polygraphy__date {
     margin-bottom: 10px;
+}
+
+.request-polygraphy__select--margin {
+   margin-left: 385px;
+}
+
+.polygraphy__container-info--margin {
+  margin-bottom: 35px;  
+}
+
+.polygraphy__heading--details {
+    font-weight: 600;
+    font-size: 22px;
+    padding: 60px 0 25px 0;
+    color: $blueColor;
+}
+
+.polygraphy__details-item-margin {
+    margin-bottom: 10px;
+}
+
+.polygraphy__details-span-style {
+    color: $blueColor;
+}
+
+.polygraphy_added-file {
+    display: flex;
+    align-items: center;
+    padding: 43px 0 75px 0;
+
+    img {
+        margin-right: 15px;
+    }
 }
